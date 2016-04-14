@@ -1,0 +1,103 @@
+ NOMBRE : val9C   
+ COMENTARIO : 494 (cota superior)
+ VERTICES :  50
+ ARISTAS_REQ :   92
+ ARISTAS_NOREQ :    0
+ VEHICULOS :  5
+ CAPACIDAD :   140
+ TIPO_COSTES_ARISTAS : EXPLICITOS
+ COSTE_TOTAL_REQ :   405
+ LISTA_ARISTAS_REQ : 
+ (  1,  5)   coste     3   demanda    12
+ (  1,  9)   coste     3   demanda     7
+ (  1, 10)   coste     4   demanda    13
+ (  1, 15)   coste     4   demanda     8
+ (  1, 16)   coste     4   demanda    12
+ (  2,  3)   coste     2   demanda     3
+ (  2,  5)   coste     2   demanda     4
+ (  3,  4)   coste     3   demanda     6
+ (  3,  6)   coste     4   demanda     7
+ (  4,  7)   coste     3   demanda     6
+ (  5,  6)   coste     2   demanda     8
+ (  5, 10)   coste     2   demanda     5
+ (  6,  7)   coste     3   demanda     7
+ (  6, 11)   coste     3   demanda     6
+ (  7, 12)   coste     2   demanda     8
+ (  8,  9)   coste     5   demanda    10
+ (  8, 13)   coste     6   demanda    11
+ (  9, 13)   coste     4   demanda    12
+ (  9, 14)   coste     1   demanda     3
+ ( 10, 11)   coste     2   demanda     4
+ ( 10, 17)   coste     4   demanda     8
+ ( 11, 12)   coste     2   demanda     5
+ ( 11, 18)   coste     3   demanda     9
+ ( 12, 19)   coste     4   demanda     8
+ ( 13, 21)   coste     1   demanda     3
+ ( 13, 22)   coste     4   demanda    10
+ ( 14, 15)   coste     3   demanda     5
+ ( 14, 22)   coste     4   demanda     8
+ ( 14, 23)   coste     2   demanda     5
+ ( 15, 16)   coste     4   demanda    10
+ ( 15, 23)   coste     1   demanda     3
+ ( 15, 24)   coste     2   demanda     4
+ ( 16, 17)   coste     3   demanda     7
+ ( 17, 18)   coste     1   demanda     3
+ ( 17, 24)   coste     4   demanda    12
+ ( 17, 30)   coste     6   demanda    14
+ ( 17, 31)   coste     4   demanda    15
+ ( 18, 19)   coste     1   demanda     2
+ ( 19, 32)   coste     7   demanda    16
+ ( 20, 21)   coste     1   demanda     5
+ ( 20, 25)   coste     3   demanda     5
+ ( 21, 22)   coste     2   demanda     4
+ ( 21, 26)   coste     2   demanda     4
+ ( 22, 23)   coste     5   demanda     8
+ ( 22, 28)   coste     4   demanda     8
+ ( 23, 24)   coste     2   demanda     5
+ ( 23, 28)   coste     2   demanda     4
+ ( 23, 29)   coste     4   demanda     3
+ ( 24, 29)   coste     2   demanda     6
+ ( 24, 30)   coste     3   demanda     5
+ ( 25, 26)   coste     2   demanda     4
+ ( 25, 33)   coste     1   demanda     4
+ ( 26, 27)   coste     3   demanda     5
+ ( 26, 34)   coste     4   demanda     6
+ ( 27, 28)   coste     1   demanda     3
+ ( 27, 35)   coste     2   demanda     7
+ ( 28, 29)   coste     5   demanda     8
+ ( 28, 36)   coste     5   demanda     8
+ ( 29, 30)   coste     1   demanda     4
+ ( 29, 37)   coste     3   demanda     7
+ ( 30, 38)   coste     3   demanda     4
+ ( 30, 39)   coste     2   demanda     5
+ ( 31, 32)   coste     2   demanda     7
+ ( 31, 39)   coste     4   demanda     6
+ ( 32, 40)   coste     2   demanda     4
+ ( 33, 34)   coste     2   demanda     4
+ ( 33, 41)   coste     4   demanda    11
+ ( 34, 35)   coste     1   demanda     5
+ ( 34, 42)   coste     4   demanda    10
+ ( 35, 36)   coste     2   demanda     4
+ ( 35, 43)   coste     6   demanda    14
+ ( 36, 38)   coste     1   demanda     3
+ ( 36, 44)   coste     5   demanda    10
+ ( 37, 38)   coste     2   demanda     5
+ ( 37, 44)   coste     3   demanda     8
+ ( 38, 39)   coste     3   demanda     7
+ ( 38, 46)   coste     3   demanda    12
+ ( 39, 40)   coste     4   demanda    10
+ ( 39, 47)   coste     5   demanda    14
+ ( 40, 47)   coste     3   demanda    10
+ ( 41, 42)   coste     2   demanda     4
+ ( 42, 43)   coste     2   demanda     5
+ ( 43, 44)   coste     4   demanda    10
+ ( 43, 48)   coste     7   demanda    12
+ ( 44, 45)   coste     2   demanda     5
+ ( 45, 46)   coste     2   demanda     4
+ ( 45, 48)   coste     5   demanda    12
+ ( 45, 49)   coste     3   demanda     8
+ ( 45, 50)   coste     3   demanda     7
+ ( 46, 50)   coste     2   demanda     4
+ ( 48, 49)   coste     4   demanda    10
+ ( 49, 50)   coste     2   demanda     8
+ DEPOSITO :   1

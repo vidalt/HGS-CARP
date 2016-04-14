@@ -1,0 +1,27 @@
+ NOMBRE :P102*
+ COMENTARIO :  
+ VERTICES : 12
+ ARISTAS_REQ : 10
+ ARISTAS_NOREQ : 10
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste   26    99
+ (  1,  3)   coste   15    52
+ (  2,  3)   coste   49    82
+ (  4,  5)   coste   71    48
+ (  6,  7)   coste   44    15
+ (  7,  8)   coste   38    41
+ (  8,  9)   coste   25    91
+ ( 10, 11)   coste   97    17
+ ( 10, 12)   coste   82    37
+ ( 11, 12)   coste   27    64
+ LISTA_ARISTAS_NOREQ :
+ (  1,  4)   coste   13    47
+ (  1,  5)   coste    5    14
+ (  1,  6)   coste   45    39
+ (  2,  5)   coste   99    83
+ (  2, 11)   coste   51    75
+ (  5,  6)   coste   32     2
+ (  5, 10)   coste    7    16
+ (  6,  8)   coste    1    79
+ (  7, 10)   coste   96    53
+ (  9, 12)   coste   23    36

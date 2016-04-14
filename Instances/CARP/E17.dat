@@ -1,0 +1,62 @@
+NOMBRE : E17
+COMENTARIO : OPT=2740
+VERTICES : 38
+ARISTAS_REQ : 36
+ARISTAS_NOREQ : 14
+VEHICULOS : 5
+CAPACIDAD : 300
+TIPO_COSTES_ARISTAS : EXPLICITOS
+COSTE_TOTAL_REQ : 1450
+LISTA_ARISTAS_REQ :
+( 1, 3)   coste 40   demanda 40
+( 2, 28)   coste 40   demanda 40
+( 3, 21)   coste 110   demanda 110
+( 3, 28)   coste 20   demanda 20
+( 4, 17)   coste 130   demanda 130
+( 5, 38)   coste 80   demanda 80
+( 13, 29)   coste 55   demanda 55
+( 14, 15)   coste 35   demanda 35
+( 15, 37)   coste 80   demanda 80
+( 15, 16)   coste 50   demanda 50
+( 16, 36)   coste 15   demanda 15
+( 16, 19)   coste 10   demanda 10
+( 17, 35)   coste 10   demanda 10
+( 17, 18)   coste 10   demanda 10
+( 18, 20)   coste 25   demanda 25
+( 18, 19)   coste 10   demanda 10
+( 19, 22)   coste 25   demanda 25
+( 20, 21)   coste 20   demanda 20
+( 20, 22)   coste 15   demanda 15
+( 22, 23)   coste 145   demanda 145
+( 23, 28)   coste 65   demanda 65
+( 23, 26)   coste 15   demanda 15
+( 23, 24)   coste 15   demanda 15
+( 24, 26)   coste 15   demanda 15
+( 24, 25)   coste 25   demanda 25
+( 26, 27)   coste 30   demanda 30
+( 29, 37)   coste 85   demanda 85
+( 30, 31)   coste 10   demanda 10
+( 30, 36)   coste 15   demanda 15
+( 31, 35)   coste 20   demanda 20
+( 32, 38)   coste 50   demanda 50
+( 32, 33)   coste 60   demanda 60
+( 33, 38)   coste 30   demanda 30
+( 33, 34)   coste 45   demanda 45
+( 34, 35)   coste 25   demanda 25
+( 36, 37)   coste 20   demanda 20
+LISTA_ARISTAS_NOREQ :
+( 1, 8)   coste 45
+( 1, 9)   coste 45
+( 2, 8)   coste 40
+( 2, 6)   coste 5
+( 3, 4)   coste 80
+( 4, 5)   coste 50
+( 4, 9)   coste 40
+( 6, 7)   coste 20
+( 7, 12)   coste 30
+( 10, 13)   coste 85
+( 10, 11)   coste 50
+( 11, 14)   coste 15
+( 11, 25)   coste 165
+( 12, 27)   coste 25
+DEPOSITO :   34

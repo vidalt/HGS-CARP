@@ -1,0 +1,34 @@
+ NOMBRE : gdb12
+ COMENTARIO : 10000 (cota superior) 
+ VERTICES : 13
+ ARISTAS_REQ : 23
+ ARISTAS_NOREQ : 0
+ VEHICULOS : 7
+ CAPACIDAD : 35
+ TIPO_COSTES_ARISTAS : EXPLICITOS
+ COSTE_TOTAL_REQ : 334
+ LISTA_ARISTAS_REQ :
+ ( 1, 2)  coste 5 demanda 7
+ ( 1, 3)  coste 7 demanda 12
+ ( 1, 4)  coste 10 demanda 15
+ ( 1, 5)  coste 19 demanda 1
+ ( 2, 3)  coste 16 demanda 13
+ ( 2, 6)  coste 8 demanda 8
+ ( 2, 7)  coste 9 demanda 16
+ ( 2, 8)  coste 14 demanda 7
+ ( 3, 6)  coste 11 demanda 3
+ ( 4, 5)  coste 11 demanda 15
+ ( 4, 10)  coste 26 demanda 8
+ ( 4, 11)  coste 30 demanda 16
+ ( 5, 10)  coste 3 demanda 11
+ ( 6, 10)  coste 13 demanda 14
+ ( 6, 12)  coste 17 demanda 4
+ ( 7, 9)  coste 30 demanda 3
+ ( 8, 9)  coste 18 demanda 1
+ ( 8, 12)  coste 21 demanda 5
+ ( 9, 13)  coste 8 demanda 9
+ ( 10, 11)  coste 15 demanda 14
+ ( 11, 12)  coste 19 demanda 15
+ ( 11, 13)  coste 12 demanda 1
+ ( 12, 13)  coste 14 demanda 14
+ DEPOSITO :   1

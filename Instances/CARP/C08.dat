@@ -1,0 +1,100 @@
+NOMBRE : C08
+COMENTARIO : OPT=4090
+VERTICES : 66
+ARISTAS_REQ : 63
+ARISTAS_NOREQ : 25
+VEHICULOS : 8
+CAPACIDAD : 300
+TIPO_COSTES_ARISTAS : EXPLICITOS
+COSTE_TOTAL_REQ : 2360
+LISTA_ARISTAS_REQ :
+( 1, 32)   coste 40   demanda 40
+( 2, 61)   coste 100   demanda 100
+( 2, 40)   coste 60   demanda 60
+( 3, 4)   coste 20   demanda 20
+( 3, 39)   coste 45   demanda 45
+( 4, 5)   coste 50   demanda 50
+( 5, 38)   coste 30   demanda 30
+( 9, 10)   coste 30   demanda 30
+( 9, 34)   coste 60   demanda 60
+( 10, 15)   coste 10   demanda 10
+( 11, 34)   coste 70   demanda 70
+( 12, 31)   coste 100   demanda 100
+( 15, 17)   coste 10   demanda 10
+( 16, 17)   coste 140   demanda 140
+( 16, 47)   coste 15   demanda 15
+( 18, 19)   coste 45   demanda 45
+( 18, 54)   coste 35   demanda 35
+( 19, 29)   coste 25   demanda 25
+( 29, 54)   coste 65   demanda 65
+( 29, 66)   coste 55   demanda 55
+( 30, 31)   coste 35   demanda 35
+( 31, 32)   coste 10   demanda 10
+( 32, 33)   coste 30   demanda 30
+( 33, 34)   coste 30   demanda 30
+( 33, 36)   coste 50   demanda 50
+( 34, 35)   coste 60   demanda 60
+( 35, 36)   coste 30   demanda 30
+( 35, 37)   coste 20   demanda 20
+( 35, 46)   coste 110   demanda 110
+( 36, 37)   coste 40   demanda 40
+( 37, 43)   coste 20   demanda 20
+( 38, 42)   coste 55   demanda 55
+( 39, 41)   coste 40   demanda 40
+( 40, 41)   coste 20   demanda 20
+( 41, 42)   coste 10   demanda 10
+( 41, 44)   coste 20   demanda 20
+( 42, 43)   coste 20   demanda 20
+( 43, 44)   coste 20   demanda 20
+( 44, 45)   coste 70   demanda 70
+( 45, 46)   coste 10   demanda 10
+( 46, 48)   coste 10   demanda 10
+( 47, 48)   coste 25   demanda 25
+( 47, 49)   coste 20   demanda 20
+( 47, 55)   coste 20   demanda 20
+( 48, 49)   coste 10   demanda 10
+( 49, 51)   coste 15   demanda 15
+( 50, 60)   coste 65   demanda 65
+( 50, 51)   coste 35   demanda 35
+( 51, 53)   coste 10   demanda 10
+( 52, 59)   coste 10   demanda 10
+( 52, 53)   coste 75   demanda 75
+( 52, 58)   coste 10   demanda 10
+( 53, 55)   coste 20   demanda 20
+( 54, 56)   coste 50   demanda 50
+( 55, 56)   coste 95   demanda 95
+( 56, 57)   coste 10   demanda 10
+( 57, 62)   coste 15   demanda 15
+( 57, 64)   coste 20   demanda 20
+( 58, 63)   coste 50   demanda 50
+( 60, 61)   coste 10   demanda 10
+( 62, 63)   coste 20   demanda 20
+( 64, 65)   coste 15   demanda 15
+( 65, 66)   coste 45   demanda 45
+LISTA_ARISTAS_NOREQ :
+( 1, 8)   coste 20
+( 2, 7)   coste 35
+( 3, 7)   coste 30
+( 5, 6)   coste 30
+( 6, 8)   coste 85
+( 10, 13)   coste 30
+( 11, 12)   coste 10
+( 11, 13)   coste 115
+( 14, 24)   coste 50
+( 14, 15)   coste 60
+( 16, 18)   coste 75
+( 17, 28)   coste 100
+( 18, 21)   coste 55
+( 19, 20)   coste 10
+( 20, 22)   coste 60
+( 21, 26)   coste 10
+( 22, 25)   coste 10
+( 23, 24)   coste 10
+( 23, 25)   coste 40
+( 24, 27)   coste 35
+( 25, 26)   coste 10
+( 26, 27)   coste 15
+( 27, 28)   coste 35
+( 59, 60)   coste 40
+( 62, 64)   coste 10
+DEPOSITO :   45

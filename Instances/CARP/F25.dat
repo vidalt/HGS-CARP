@@ -1,0 +1,47 @@
+NOMBRE : F25
+COMENTARIO : OPT=1390
+VERTICES : 26
+ARISTAS_REQ : 28
+ARISTAS_NOREQ : 7
+VEHICULOS : 2
+CAPACIDAD : 600
+TIPO_COSTES_ARISTAS : EXPLICITOS
+COSTE_TOTAL_REQ : 960
+LISTA_ARISTAS_REQ :
+( 1, 26)   coste 100   demanda 100
+( 1, 2)   coste 15   demanda 15
+( 1, 22)   coste 110   demanda 110
+( 3, 15)   coste 5   demanda 5
+( 3, 24)   coste 25   demanda 25
+( 3, 4)   coste 40   demanda 40
+( 3, 10)   coste 15   demanda 15
+( 5, 22)   coste 40   demanda 40
+( 5, 14)   coste 40   demanda 40
+( 5, 13)   coste 40   demanda 40
+( 6, 21)   coste 25   demanda 25
+( 6, 8)   coste 10   demanda 10
+( 6, 7)   coste 10   demanda 10
+( 7, 8)   coste 10   demanda 10
+( 8, 17)   coste 15   demanda 15
+( 9, 16)   coste 45   demanda 45
+( 10, 12)   coste 60   demanda 60
+( 10, 15)   coste 15   demanda 15
+( 15, 16)   coste 5   demanda 5
+( 15, 24)   coste 25   demanda 25
+( 17, 18)   coste 80   demanda 80
+( 17, 21)   coste 50   demanda 50
+( 18, 23)   coste 20   demanda 20
+( 19, 21)   coste 20   demanda 20
+( 19, 22)   coste 30   demanda 30
+( 20, 22)   coste 80   demanda 80
+( 20, 23)   coste 15   demanda 15
+( 23, 24)   coste 15   demanda 15
+LISTA_ARISTAS_NOREQ :
+( 4, 20)   coste 30
+( 4, 12)   coste 70
+( 11, 12)   coste 25
+( 11, 13)   coste 70
+( 13, 14)   coste 10
+( 19, 25)   coste 55
+( 25, 26)   coste 50
+DEPOSITO :   21

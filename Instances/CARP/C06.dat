@@ -1,0 +1,67 @@
+NOMBRE : C06
+COMENTARIO : OPT=2535
+VERTICES : 38
+ARISTAS_REQ : 51
+ARISTAS_NOREQ : 4
+VEHICULOS : 6
+CAPACIDAD : 300
+TIPO_COSTES_ARISTAS : EXPLICITOS
+COSTE_TOTAL_REQ : 1640
+LISTA_ARISTAS_REQ :
+( 1, 2)   coste 45   demanda 45
+( 1, 5)   coste 115   demanda 115
+( 1, 31)   coste 10   demanda 10
+( 2, 32)   coste 55   demanda 55
+( 2, 5)   coste 70   demanda 70
+( 3, 32)   coste 50   demanda 50
+( 3, 4)   coste 20   demanda 20
+( 3, 6)   coste 35   demanda 35
+( 4, 6)   coste 45   demanda 45
+( 4, 16)   coste 80   demanda 80
+( 5, 6)   coste 25   demanda 25
+( 6, 7)   coste 20   demanda 20
+( 7, 8)   coste 10   demanda 10
+( 7, 9)   coste 15   demanda 15
+( 7, 12)   coste 35   demanda 35
+( 8, 9)   coste 5   demanda 5
+( 8, 11)   coste 15   demanda 15
+( 8, 12)   coste 10   demanda 10
+( 9, 10)   coste 15   demanda 15
+( 10, 11)   coste 5   demanda 5
+( 10, 18)   coste 55   demanda 55
+( 11, 12)   coste 10   demanda 10
+( 11, 13)   coste 15   demanda 15
+( 12, 14)   coste 10   demanda 10
+( 13, 14)   coste 20   demanda 20
+( 13, 17)   coste 30   demanda 30
+( 14, 15)   coste 20   demanda 20
+( 15, 16)   coste 20   demanda 20
+( 15, 20)   coste 30   demanda 30
+( 16, 36)   coste 40   demanda 40
+( 17, 19)   coste 20   demanda 20
+( 17, 21)   coste 35   demanda 35
+( 18, 23)   coste 55   demanda 55
+( 18, 33)   coste 75   demanda 75
+( 19, 21)   coste 10   demanda 10
+( 19, 24)   coste 45   demanda 45
+( 20, 22)   coste 30   demanda 30
+( 21, 22)   coste 35   demanda 35
+( 22, 37)   coste 40   demanda 40
+( 23, 24)   coste 5   demanda 5
+( 23, 33)   coste 20   demanda 20
+( 24, 34)   coste 30   demanda 30
+( 25, 36)   coste 50   demanda 50
+( 26, 27)   coste 10   demanda 10
+( 27, 32)   coste 60   demanda 60
+( 28, 29)   coste 10   demanda 10
+( 28, 32)   coste 55   demanda 55
+( 29, 31)   coste 40   demanda 40
+( 30, 31)   coste 45   demanda 45
+( 34, 35)   coste 20   demanda 20
+( 37, 38)   coste 20   demanda 20
+LISTA_ARISTAS_NOREQ :
+( 25, 26)   coste 50
+( 33, 34)   coste 20
+( 35, 38)   coste 60
+( 36, 37)   coste 60
+DEPOSITO :   5

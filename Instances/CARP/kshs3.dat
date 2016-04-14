@@ -1,0 +1,26 @@
+ NOMBRE : kshs3
+ COMENTARIO : 63056.000000 (cota superior) 
+ VERTICES : 6
+ ARISTAS_REQ : 15
+ ARISTAS_NOREQ : 0
+ VEHICULOS : 4
+ CAPACIDAD : 150
+ TIPO_COSTES_ARISTAS : EXPLICITOS
+ COSTE_TOTAL_REQ : 7882
+ LISTA_ARISTAS_REQ :
+ ( 1, 2)  coste 232 demanda 27
+ ( 1, 3)  coste 488 demanda 33
+ ( 1, 4)  coste 173 demanda 26
+ ( 1, 5)  coste 426 demanda 46
+ ( 1, 6)  coste 582 demanda 40
+ ( 2, 3)  coste 691 demanda 25
+ ( 2, 4)  coste 244 demanda 1
+ ( 2, 5)  coste 583 demanda 53
+ ( 2, 6)  coste 351 demanda 59
+ ( 3, 4)  coste 634 demanda 64
+ ( 3, 5)  coste 666 demanda 6
+ ( 3, 6)  coste 1014 demanda 62
+ ( 4, 5)  coste 340 demanda 51
+ ( 4, 6)  coste 563 demanda 64
+ ( 5, 6)  coste 895 demanda 8
+ DEPOSITO :   1

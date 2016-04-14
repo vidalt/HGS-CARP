@@ -1,0 +1,44 @@
+
+Here are a few examples of commandline, which can be tested, along with the solutions produced by the algorithm.
+First, to compile the code, go to the directoty "Program" and call the "make" command.
+Then,
+
+-----------------------------------------------------------------------------
+
+For the CARP (type = 30), making a run with 300 seconds (default setting), specifying the path of the instance, solution file and seed.
+
+./gencarp ../Instances/CARP/gdb1.dat -type 30 -sol testCARP.sol -seed 1
+
+This command should produce the solution file testCARP.sol with an objective value of 316 in a few seconds, depending on the performance of the computer.
+
+Note the traces that are also displayed during the run. These traces give some information on the current status of the population as well as the types of local search moves which were applied.
+
+-----------------------------------------------------------------------------
+
+Other examples follow for other types of problems. The solutions are enclosed in the directory "Examples".
+
+./gencarp ../Instances/MCGRP/mgval_0.25_1A.dat -type 31 -sol testMCGRP.sol -seed 1
+
+./gencarp ../Instances/PCARP/gdb10.txt -type 32  -sol testPCARP.sol -seed 1 -veh 10
+
+./gencarp ../Instances/CARP/egl-e1-A.dat -type 33 -sol testMDCARP.sol -seed 1 -dep 4
+
+./gencarp ../Instances/MM-kWRPP/P202100 -type 35 -sol testMM-kWRPP.sol -seed 1 -veh 3
+
+Finally, to test the problem on the MCGRP with turn penalties, one should add the flag "TURN_PENALTIES" and recompile.
+This can be done by editing the line "CCFLAGS = -O3 -DTURN_PENALTIES" in the makefile.
+Then, the following commandline can be run:
+
+./gencarp ../Instances/MCGRP-TP/DI-NEARP-n80-Q4k-TP.dat -type 34 -sol testMCGRP-TP.sol -seed 1
+
+
+
+
+
+
+
+
+
+
+
+

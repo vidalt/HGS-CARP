@@ -1,0 +1,26 @@
+ NOMBRE : kshs4
+ COMENTARIO : 12542 (cota superior) 
+ VERTICES : 8
+ ARISTAS_REQ : 15
+ ARISTAS_NOREQ : 0
+ VEHICULOS : 4
+ CAPACIDAD : 150
+ TIPO_COSTES_ARISTAS : EXPLICITOS
+ COSTE_TOTAL_REQ : 7991
+ LISTA_ARISTAS_REQ :
+ ( 1, 4)  coste 873 demanda 42
+ ( 1, 5)  coste 640 demanda 58
+ ( 1, 7)  coste 444 demanda 34
+ ( 2, 3)  coste 583 demanda 20
+ ( 2, 7)  coste 740 demanda 53
+ ( 3, 4)  coste 471 demanda 63
+ ( 3, 5)  coste 293 demanda 16
+ ( 3, 6)  coste 441 demanda 65
+ ( 4, 6)  coste 866 demanda 50
+ ( 4, 8)  coste 318 demanda 37
+ ( 5, 6)  coste 334 demanda 42
+ ( 5, 7)  coste 466 demanda 1
+ ( 6, 7)  coste 602 demanda 51
+ ( 6, 8)  coste 563 demanda 22
+ ( 7, 8)  coste 357 demanda 40
+ DEPOSITO :   1

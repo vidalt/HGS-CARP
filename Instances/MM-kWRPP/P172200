@@ -1,0 +1,51 @@
+ NOMBRE :P172*
+ COMENTARIO :  
+ VERTICES : 19
+ ARISTAS_REQ : 17
+ ARISTAS_NOREQ : 27
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste  115   107
+ (  2,  3)   coste   16     3
+ (  2,  4)   coste   53   122
+ (  3,  4)   coste  164    76
+ (  5,  6)   coste   73   167
+ (  5,  8)   coste  163    68
+ (  6,  7)   coste   99    49
+ (  7,  8)   coste  104    95
+ (  7,  9)   coste  127     7
+ (  8,  9)   coste   27   103
+ ( 10, 11)   coste   99   196
+ ( 10, 12)   coste  149   159
+ ( 13, 14)   coste  131    38
+ ( 14, 15)   coste  163    79
+ ( 14, 16)   coste  145    95
+ ( 17, 18)   coste  113    94
+ ( 18, 19)   coste   46   162
+ LISTA_ARISTAS_NOREQ :
+ (  1, 19)   coste   64    16
+ (  3,  5)   coste  180   185
+ (  3,  6)   coste   96     7
+ (  3, 14)   coste   26   196
+ (  3, 17)   coste   45   162
+ (  4, 14)   coste  108   129
+ (  4, 17)   coste   64   117
+ (  4, 19)   coste   23    79
+ (  5, 13)   coste    4   175
+ (  5, 14)   coste  154   133
+ (  6, 14)   coste   39   122
+ (  8, 13)   coste  150   172
+ (  9, 10)   coste   93    30
+ (  9, 12)   coste  141    13
+ (  9, 15)   coste  109    66
+ (  9, 16)   coste  182   129
+ (  9, 17)   coste   97   126
+ ( 11, 12)   coste  149    34
+ ( 11, 16)   coste   65   123
+ ( 11, 17)   coste   13    14
+ ( 12, 16)   coste   42   111
+ ( 12, 17)   coste  103     4
+ ( 13, 15)   coste  135   135
+ ( 14, 17)   coste  184   149
+ ( 14, 19)   coste  187    60
+ ( 15, 16)   coste    7   120
+ ( 17, 19)   coste   10   136

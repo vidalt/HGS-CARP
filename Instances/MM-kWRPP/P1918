@@ -1,0 +1,61 @@
+ NOMBRE :P1918
+ COMENTARIO :  
+ VERTICES : 33
+ ARISTAS_REQ : 29
+ ARISTAS_NOREQ : 25
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste    1     1
+ (  2,  3)   coste    6     1
+ (  2,  4)   coste    5     6
+ (  3,  4)   coste    6    11
+ (  4,  5)   coste    9     5
+ (  6,  7)   coste    2     7
+ (  6,  8)   coste    1     1
+ (  6,  9)   coste    5     5
+ ( 10, 11)   coste    7     6
+ ( 11, 12)   coste    9     5
+ ( 12, 13)   coste    2     4
+ ( 12, 14)   coste    3     1
+ ( 15, 16)   coste    4    10
+ ( 15, 17)   coste    6     8
+ ( 18, 20)   coste    9     1
+ ( 20, 21)   coste    2     1
+ ( 19, 21)   coste    2     1
+ ( 21, 23)   coste    3     1
+ ( 22, 23)   coste    3     3
+ ( 24, 26)   coste    5     5
+ ( 25, 26)   coste    6     1
+ ( 26, 27)   coste    5     5
+ ( 28, 29)   coste    3     7
+ ( 29, 30)   coste   10     5
+ ( 29, 31)   coste    3     5
+ ( 31, 32)   coste    3     4
+ ( 28, 32)   coste    3     1
+ ( 32, 33)   coste    1     4
+ (  8,  9)   coste    3     2
+ LISTA_ARISTAS_NOREQ :
+ (  1,  6)   coste   15     7
+ (  2, 25)   coste   17    13
+ (  3,  5)   coste    6     4
+ (  4, 25)   coste   13    15
+ (  5, 33)   coste    4     5
+ (  7, 10)   coste   13    19
+ (  9, 10)   coste    6    13
+ (  9, 31)   coste    4     8
+ ( 10, 12)   coste    5     1
+ ( 11, 16)   coste   23    18
+ ( 13, 14)   coste    6     6
+ ( 14, 16)   coste   11    19
+ ( 14, 30)   coste    5     2
+ ( 14, 31)   coste   17    10
+ ( 17, 18)   coste   11    13
+ ( 18, 19)   coste    1     1
+ ( 19, 30)   coste   13    13
+ ( 20, 23)   coste    1     6
+ ( 22, 25)   coste   11    14
+ ( 24, 25)   coste    4     4
+ ( 25, 27)   coste    3     4
+ ( 25, 30)   coste    2     8
+ ( 25, 32)   coste   10    11
+ ( 28, 31)   coste    6     5
+ ( 30, 32)   coste    5     4

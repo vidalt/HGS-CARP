@@ -1,0 +1,51 @@
+ NOMBRE :P171*
+ COMENTARIO :  
+ VERTICES : 19
+ ARISTAS_REQ : 17
+ ARISTAS_NOREQ : 27
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste    1     5
+ (  2,  3)   coste    1     1
+ (  2,  4)   coste    6    10
+ (  3,  4)   coste    7     3
+ (  5,  6)   coste    3     5
+ (  5,  8)   coste    2     2
+ (  6,  7)   coste   10    11
+ (  7,  8)   coste    5     7
+ (  7,  9)   coste    1     4
+ (  8,  9)   coste    4     8
+ ( 10, 11)   coste    6     1
+ ( 10, 12)   coste    5     1
+ ( 13, 14)   coste    2     2
+ ( 14, 15)   coste    5     8
+ ( 14, 16)   coste    4     1
+ ( 17, 18)   coste    4    13
+ ( 18, 19)   coste    1     1
+ LISTA_ARISTAS_NOREQ :
+ (  1, 19)   coste    9     3
+ (  3,  5)   coste    3     6
+ (  3,  6)   coste   13     4
+ (  3, 14)   coste    8     8
+ (  3, 17)   coste    2     7
+ (  4, 14)   coste    7     2
+ (  4, 17)   coste    9    10
+ (  4, 19)   coste   14    12
+ (  5, 13)   coste    8    13
+ (  5, 14)   coste    3     2
+ (  6, 14)   coste   12     7
+ (  8, 13)   coste    2    11
+ (  9, 10)   coste    5     1
+ (  9, 12)   coste    5     1
+ (  9, 15)   coste   13     9
+ (  9, 16)   coste   12    14
+ (  9, 17)   coste   19    15
+ ( 11, 12)   coste    2     1
+ ( 11, 16)   coste   10    14
+ ( 11, 17)   coste   20    17
+ ( 12, 16)   coste   18    16
+ ( 12, 17)   coste   21    19
+ ( 13, 15)   coste    6     5
+ ( 14, 17)   coste    6     8
+ ( 14, 19)   coste    9    14
+ ( 15, 16)   coste    1     2
+ ( 17, 19)   coste   15    14

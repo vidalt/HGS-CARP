@@ -1,0 +1,42 @@
+ NOMBRE :P0415
+ COMENTARIO :  
+ VERTICES : 17
+ ARISTAS_REQ : 22
+ ARISTAS_NOREQ : 13
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste    3     1
+ (  1,  4)   coste    1     3
+ (  2,  3)   coste    1     1
+ (  2,  4)   coste    1     1
+ (  3,  4)   coste    1     1
+ (  4,  5)   coste    2     1
+ (  6,  7)   coste    1     2
+ (  6,  8)   coste    2     2
+ (  7,  8)   coste    1     1
+ (  7, 10)   coste    1     1
+ (  7, 12)   coste    1     3
+ (  9, 10)   coste    1     1
+ (  9, 12)   coste    1     1
+ ( 11, 12)   coste    1     1
+ ( 13, 14)   coste    1     1
+ ( 13, 17)   coste    1     1
+ ( 14, 15)   coste    1     1
+ ( 14, 16)   coste    4     2
+ ( 14, 17)   coste    1     3
+ ( 15, 17)   coste    1     1
+ ( 15, 16)   coste    1     1
+ ( 16, 17)   coste    2     1
+ LISTA_ARISTAS_NOREQ :
+ (  1, 16)   coste    7     7
+ (  3,  6)   coste    1     5
+ (  4, 17)   coste    4     4
+ (  5,  6)   coste    2     1
+ (  5,  8)   coste    1     1
+ (  5, 13)   coste   11     8
+ (  5, 17)   coste    7     4
+ (  6, 13)   coste    8     5
+ (  7,  9)   coste    1     1
+ (  8, 10)   coste    1     1
+ (  9, 11)   coste    1     1
+ ( 10, 13)   coste    4     3
+ ( 12, 13)   coste    2     6

@@ -1,0 +1,72 @@
+Name:		BHW4
+Optimal value:	240
+#Vehicles:	-1
+Capacity:	27
+Depot Node:	1
+#Nodes:		11
+#Edges:		0
+#Arcs:		44
+#Required N:	6
+#Required E:	0
+#Required A:	44
+
+ReN.	DEMAND	S. COST
+N5	4	4
+N9	4	4
+N8	7	7
+N6	3	3
+N11	3	3
+N10	9	9
+
+ReE.	From N.	To N.	T. COST	DEMAND	S. COST
+
+EDGE	FROM N.	TO N.	T. COST
+
+ReA.	FROM N.	TO N.	T. COST	DEMAND	S. COST
+A1	2	1	6	5	11
+A2	3	1	1	4	5
+A3	4	1	2	4	6
+A4	5	1	1	1	2
+A5	1	6	1	6	7
+A6	1	7	1	3	4
+A7	1	8	1	6	7
+A8	1	9	2	1	3
+A9	1	10	3	9	12
+A10	1	11	3	5	8
+A11	3	2	5	3	8
+A12	2	4	1	7	8
+A13	5	2	8	9	17
+A14	2	7	1	1	2
+A15	8	2	1	2	3
+A16	2	9	8	4	12
+A17	11	2	5	1	6
+A18	3	4	6	1	7
+A19	5	3	3	3	6
+A20	7	3	1	4	5
+A21	3	9	9	8	17
+A22	10	3	1	6	7
+A23	3	11	8	9	17
+A24	4	5	7	7	14
+A25	4	6	6	9	15
+A26	4	7	7	7	14
+A27	8	4	7	5	12
+A28	9	4	1	4	5
+A29	4	10	8	2	10
+A30	11	4	3	8	11
+A31	5	7	6	8	14
+A32	8	5	1	2	3
+A33	5	10	6	7	13
+A34	11	5	8	8	16
+A35	6	7	5	3	8
+A36	8	6	8	6	14
+A37	6	9	5	1	6
+A38	10	6	6	1	7
+A39	7	9	6	4	10
+A40	10	7	2	2	4
+A41	7	11	1	5	6
+A42	8	9	9	3	12
+A43	10	9	7	8	15
+A44	9	11	4	3	7
+
+ARC	FROM N.	TO N.	T. COST
+the data is based on the CARP instance gdb22.						

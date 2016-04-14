@@ -1,0 +1,138 @@
+NOMBRE : E15
+COMENTARIO : UB=4205, LB=4200
+VERTICES : 85
+ARISTAS_REQ : 107
+ARISTAS_NOREQ : 19
+VEHICULOS : 9
+CAPACIDAD : 300
+TIPO_COSTES_ARISTAS : EXPLICITOS
+COSTE_TOTAL_REQ : 2615
+LISTA_ARISTAS_REQ :
+( 1, 2)   coste 15   demanda 15
+( 1, 9)   coste 40   demanda 40
+( 1, 44)   coste 5   demanda 5
+( 2, 8)   coste 20   demanda 20
+( 2, 43)   coste 20   demanda 20
+( 2, 56)   coste 15   demanda 15
+( 3, 7)   coste 55   demanda 55
+( 3, 6)   coste 20   demanda 20
+( 3, 42)   coste 75   demanda 75
+( 4, 5)   coste 10   demanda 10
+( 5, 6)   coste 25   demanda 25
+( 5, 42)   coste 30   demanda 30
+( 7, 8)   coste 25   demanda 25
+( 9, 27)   coste 10   demanda 10
+( 11, 12)   coste 5   demanda 5
+( 11, 17)   coste 15   demanda 15
+( 11, 63)   coste 5   demanda 5
+( 11, 62)   coste 5   demanda 5
+( 12, 13)   coste 5   demanda 5
+( 12, 61)   coste 5   demanda 5
+( 13, 16)   coste 5   demanda 5
+( 13, 60)   coste 15   demanda 15
+( 13, 61)   coste 10   demanda 10
+( 14, 15)   coste 10   demanda 10
+( 14, 16)   coste 35   demanda 35
+( 14, 57)   coste 10   demanda 10
+( 14, 55)   coste 15   demanda 15
+( 15, 18)   coste 25   demanda 25
+( 15, 54)   coste 10   demanda 10
+( 16, 53)   coste 15   demanda 15
+( 17, 84)   coste 15   demanda 15
+( 17, 51)   coste 20   demanda 20
+( 17, 61)   coste 15   demanda 15
+( 18, 19)   coste 10   demanda 10
+( 18, 22)   coste 40   demanda 40
+( 19, 23)   coste 35   demanda 35
+( 19, 54)   coste 25   demanda 25
+( 20, 21)   coste 15   demanda 15
+( 20, 23)   coste 30   demanda 30
+( 20, 54)   coste 60   demanda 60
+( 21, 24)   coste 70   demanda 70
+( 27, 45)   coste 30   demanda 30
+( 27, 64)   coste 25   demanda 25
+( 28, 76)   coste 30   demanda 30
+( 28, 75)   coste 40   demanda 40
+( 28, 29)   coste 15   demanda 15
+( 30, 52)   coste 15   demanda 15
+( 30, 53)   coste 35   demanda 35
+( 30, 74)   coste 15   demanda 15
+( 31, 32)   coste 35   demanda 35
+( 31, 34)   coste 15   demanda 15
+( 31, 35)   coste 40   demanda 40
+( 32, 55)   coste 15   demanda 15
+( 32, 33)   coste 25   demanda 25
+( 33, 43)   coste 50   demanda 50
+( 33, 41)   coste 110   demanda 110
+( 34, 35)   coste 20   demanda 20
+( 35, 36)   coste 105   demanda 105
+( 36, 37)   coste 5   demanda 5
+( 36, 38)   coste 10   demanda 10
+( 37, 38)   coste 5   demanda 5
+( 38, 39)   coste 65   demanda 65
+( 40, 41)   coste 65   demanda 65
+( 41, 42)   coste 20   demanda 20
+( 43, 55)   coste 15   demanda 15
+( 43, 56)   coste 10   demanda 10
+( 44, 59)   coste 20   demanda 20
+( 44, 45)   coste 10   demanda 10
+( 45, 46)   coste 10   demanda 10
+( 46, 59)   coste 15   demanda 15
+( 46, 48)   coste 5   demanda 5
+( 46, 47)   coste 5   demanda 5
+( 47, 64)   coste 25   demanda 25
+( 47, 48)   coste 5   demanda 5
+( 48, 60)   coste 25   demanda 25
+( 48, 49)   coste 25   demanda 25
+( 49, 62)   coste 10   demanda 10
+( 49, 63)   coste 5   demanda 5
+( 49, 50)   coste 5   demanda 5
+( 50, 69)   coste 25   demanda 25
+( 50, 75)   coste 25   demanda 25
+( 50, 51)   coste 10   demanda 10
+( 51, 63)   coste 5   demanda 5
+( 52, 61)   coste 5   demanda 5
+( 52, 53)   coste 15   demanda 15
+( 56, 57)   coste 10   demanda 10
+( 57, 58)   coste 15   demanda 15
+( 58, 60)   coste 15   demanda 15
+( 58, 59)   coste 10   demanda 10
+( 60, 62)   coste 10   demanda 10
+( 62, 63)   coste 5   demanda 5
+( 64, 69)   coste 50   demanda 50
+( 65, 71)   coste 10   demanda 10
+( 66, 68)   coste 10   demanda 10
+( 67, 68)   coste 25   demanda 25
+( 67, 70)   coste 20   demanda 20
+( 68, 71)   coste 15   demanda 15
+( 68, 70)   coste 20   demanda 20
+( 69, 70)   coste 80   demanda 80
+( 69, 76)   coste 15   demanda 15
+( 69, 75)   coste 15   demanda 15
+( 70, 71)   coste 25   demanda 25
+( 71, 72)   coste 55   demanda 55
+( 73, 76)   coste 140   demanda 140
+( 74, 84)   coste 15   demanda 15
+( 75, 84)   coste 30   demanda 30
+( 84, 85)   coste 70   demanda 70
+LISTA_ARISTAS_NOREQ :
+( 4, 10)   coste 100
+( 10, 39)   coste 60
+( 24, 26)   coste 35
+( 25, 81)   coste 85
+( 25, 26)   coste 15
+( 29, 85)   coste 40
+( 40, 42)   coste 40
+( 65, 66)   coste 5
+( 65, 72)   coste 55
+( 72, 80)   coste 50
+( 73, 79)   coste 15
+( 73, 80)   coste 15
+( 77, 81)   coste 30
+( 77, 82)   coste 30
+( 77, 78)   coste 10
+( 78, 79)   coste 80
+( 81, 82)   coste 35
+( 82, 83)   coste 10
+( 83, 85)   coste 30
+DEPOSITO :   13

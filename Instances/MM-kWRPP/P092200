@@ -1,0 +1,33 @@
+ NOMBRE :P092*
+ COMENTARIO :  
+ VERTICES : 14
+ ARISTAS_REQ : 14
+ ARISTAS_NOREQ : 12
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste   79    84
+ (  2,  3)   coste  180   145
+ (  2,  4)   coste   91   196
+ (  3,  4)   coste  157    77
+ (  4,  5)   coste  136    47
+ (  6,  9)   coste  152   164
+ (  6, 11)   coste  182   151
+ (  7,  8)   coste  119   119
+ (  7,  9)   coste   67    55
+ (  8,  9)   coste  171   124
+ (  9, 10)   coste  124    92
+ (  9, 11)   coste  127   160
+ ( 12, 13)   coste  139   138
+ ( 13, 14)   coste   50    55
+ LISTA_ARISTAS_NOREQ :
+ (  1,  4)   coste   27    64
+ (  3,  5)   coste  130    18
+ (  5,  6)   coste   58    88
+ (  5, 11)   coste   55   162
+ (  5, 13)   coste   97    42
+ (  5, 14)   coste  175   104
+ (  8, 10)   coste  103   122
+ ( 10, 11)   coste   23    60
+ ( 10, 12)   coste    4   152
+ ( 10, 14)   coste  127    36
+ ( 11, 13)   coste  158   156
+ ( 12, 14)   coste   25    35

@@ -1,0 +1,33 @@
+ NOMBRE :P0918
+ COMENTARIO :  
+ VERTICES : 14
+ ARISTAS_REQ : 14
+ ARISTAS_NOREQ : 12
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste    5     1
+ (  2,  3)   coste    6     1
+ (  2,  4)   coste    1     6
+ (  3,  4)   coste    1     1
+ (  4,  5)   coste    2     9
+ (  6,  9)   coste    7     1
+ (  6, 11)   coste   11     7
+ (  7,  8)   coste    3     3
+ (  7,  9)   coste    1     1
+ (  8,  9)   coste    4     4
+ (  9, 10)   coste    1     4
+ (  9, 11)   coste    7     5
+ ( 12, 13)   coste    5     3
+ ( 13, 14)   coste    9    12
+ LISTA_ARISTAS_NOREQ :
+ (  1,  4)   coste    1     4
+ (  3,  5)   coste    3     6
+ (  5,  6)   coste    1     1
+ (  5, 11)   coste    7     7
+ (  5, 13)   coste    8     6
+ (  5, 14)   coste    1     6
+ (  8, 10)   coste    5     1
+ ( 10, 11)   coste    1     4
+ ( 10, 12)   coste    8     6
+ ( 10, 14)   coste    6    11
+ ( 11, 13)   coste    1     2
+ ( 12, 14)   coste    8     3

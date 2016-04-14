@@ -1,0 +1,17 @@
+ NOMBRE :P132*
+ COMENTARIO :  
+ VERTICES :  7
+ ARISTAS_REQ :  4
+ ARISTAS_NOREQ :  6
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste  313   239
+ (  2,  3)   coste  120   389
+ (  4,  5)   coste  488   397
+ (  6,  7)   coste  389    33
+ LISTA_ARISTAS_NOREQ :
+ (  1,  5)   coste  448     7
+ (  1,  7)   coste  378   450
+ (  3,  4)   coste  229   472
+ (  3,  5)   coste  262   467
+ (  3,  7)   coste  417   369
+ (  5,  7)   coste  221    96

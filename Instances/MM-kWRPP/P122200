@@ -1,0 +1,25 @@
+ NOMBRE :P122*
+ COMENTARIO :  
+ VERTICES :  7
+ ARISTAS_REQ :  5
+ ARISTAS_NOREQ : 13
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste   98   185
+ (  1,  3)   coste   30    65
+ (  2,  3)   coste  154   135
+ (  4,  5)   coste   94    78
+ (  6,  7)   coste  191   132
+ LISTA_ARISTAS_NOREQ :
+ (  1,  7)   coste   20   176
+ (  2,  4)   coste  176   183
+ (  2,  5)   coste  147    28
+ (  2,  6)   coste    3    86
+ (  2,  7)   coste   10    43
+ (  3,  4)   coste  119    26
+ (  3,  5)   coste  183    88
+ (  3,  6)   coste   23    61
+ (  3,  7)   coste   11    65
+ (  4,  6)   coste  193   183
+ (  4,  7)   coste   11    12
+ (  5,  6)   coste   14    22
+ (  5,  7)   coste  188   172

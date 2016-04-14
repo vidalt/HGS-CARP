@@ -1,0 +1,42 @@
+ NOMBRE :P042*
+ COMENTARIO :  
+ VERTICES : 17
+ ARISTAS_REQ : 22
+ ARISTAS_NOREQ : 13
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste  335   283
+ (  1,  4)   coste   61   259
+ (  2,  3)   coste   34   305
+ (  2,  4)   coste  397   200
+ (  3,  4)   coste   29   213
+ (  4,  5)   coste  314   441
+ (  6,  7)   coste   68    80
+ (  6,  8)   coste  111   118
+ (  7,  8)   coste  451   307
+ (  7, 10)   coste  323   242
+ (  7, 12)   coste  289   407
+ (  9, 10)   coste  232   372
+ (  9, 12)   coste  356   480
+ ( 11, 12)   coste  383    89
+ ( 13, 14)   coste  136   252
+ ( 13, 17)   coste  205   134
+ ( 14, 15)   coste   33    81
+ ( 14, 16)   coste  140   246
+ ( 14, 17)   coste   97   437
+ ( 15, 17)   coste  395   285
+ ( 15, 16)   coste  101   431
+ ( 16, 17)   coste  250   368
+ LISTA_ARISTAS_NOREQ :
+ (  1, 16)   coste  347     2
+ (  3,  6)   coste  360   387
+ (  4, 17)   coste  359    71
+ (  5,  6)   coste   71   424
+ (  5,  8)   coste  135   441
+ (  5, 13)   coste  280   210
+ (  5, 17)   coste  455   232
+ (  6, 13)   coste  115   123
+ (  7,  9)   coste  262   282
+ (  8, 10)   coste   65    60
+ (  9, 11)   coste  278   213
+ ( 10, 13)   coste  257   123
+ ( 12, 13)   coste  413   467

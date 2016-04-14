@@ -1,0 +1,45 @@
+ NOMBRE : val2B   
+ COMENTARIO : 346 (cota superior)
+ VERTICES :  24
+ ARISTAS_REQ :   34
+ ARISTAS_NOREQ :    0
+ VEHICULOS :  3
+ CAPACIDAD :   120
+ TIPO_COSTES_ARISTAS : EXPLICITOS
+ COSTE_TOTAL_REQ :   256
+ LISTA_ARISTAS_REQ : 
+ (  1,  2)   coste     4   demanda     6
+ (  1,  3)   coste     5   demanda     8
+ (  2,  4)   coste     2   demanda     7
+ (  3,  4)   coste     3   demanda     6
+ (  3,  9)   coste     4   demanda    11
+ (  4,  5)   coste     8   demanda     9
+ (  5, 10)   coste     8   demanda    15
+ (  5, 11)   coste     5   demanda     8
+ (  6,  7)   coste     5   demanda     9
+ (  6, 12)   coste     9   demanda    12
+ (  7,  8)   coste     2   demanda     5
+ (  8, 14)   coste     3   demanda     7
+ (  9, 10)   coste     8   demanda    12
+ (  9, 19)   coste     9   demanda    15
+ ( 10, 11)   coste    11   demanda    13
+ ( 10, 20)   coste     4   demanda    14
+ ( 11, 12)   coste     4   demanda     7
+ ( 11, 15)   coste     3   demanda     6
+ ( 12, 13)   coste     5   demanda     6
+ ( 12, 16)   coste     8   demanda     9
+ ( 13, 14)   coste     1   demanda     4
+ ( 13, 17)   coste     1   demanda     6
+ ( 14, 18)   coste     2   demanda     5
+ ( 15, 16)   coste     6   demanda     8
+ ( 15, 21)   coste     3   demanda     4
+ ( 16, 17)   coste     3   demanda     9
+ ( 17, 18)   coste     7   demanda    10
+ ( 19, 20)   coste     9   demanda    14
+ ( 19, 22)   coste     5   demanda     8
+ ( 20, 21)   coste     5   demanda    11
+ ( 20, 23)   coste     4   demanda     7
+ ( 21, 24)   coste     8   demanda     9
+ ( 22, 23)   coste     9   demanda    13
+ ( 23, 24)   coste    12   demanda    17
+ DEPOSITO :   1

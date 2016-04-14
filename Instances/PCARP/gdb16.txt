@@ -1,0 +1,67 @@
+Name= gdb16
+nbnodes=8
+nbarcs=57
+nbtasks=28
+nbnon_req=0
+nbtrucks=5
+capacity=72
+total_cost=119
+Depot=1
+!List of internal arcs:
+ arc=1, From=1, to=1, Qty=-1, Trav=0, Col= 0, inv=1,succ=1,2,3,4,5,6,7,8; freq= 5, minspac= 1, maxspac= 1
+ arc=2, From=1, to=2, Qty=8, Trav=4, Col= 4, inv=9,succ=9,10,11,12,13,14,15; freq= 4, minspac= 1, maxspac= 2
+ arc=3, From=1, to=3, Qty=1, Trav=1, Col= 1, inv=16,succ=16,17,18,19,20,21,22; freq= 5, minspac= 1, maxspac= 1
+ arc=4, From=1, to=4, Qty=3, Trav=3, Col= 3, inv=23,succ=23,24,25,26,27,28,29; freq= 1, minspac= 1, maxspac= 1
+ arc=5, From=1, to=5, Qty=2, Trav=6, Col= 6, inv=30,succ=30,31,32,33,34,35,36; freq= 2, minspac= 1, maxspac= 1
+ arc=6, From=1, to=6, Qty=7, Trav=6, Col= 6, inv=37,succ=37,38,39,40,41,42,43; freq= 3, minspac= 3, maxspac= 3
+ arc=7, From=1, to=7, Qty=2, Trav=2, Col= 2, inv=44,succ=44,45,46,47,48,49,50; freq= 4, minspac= 1, maxspac= 1
+ arc=8, From=1, to=8, Qty=3, Trav=1, Col= 1, inv=51,succ=51,52,53,54,55,56,57; freq= 5, minspac= 1, maxspac= 1
+ arc=9, From=2, to=1, Qty=8, Trav=4, Col= 4, inv=2,succ=1,2,3,4,5,6,7,8; freq= 4, minspac= 2, maxspac= 2
+ arc=10, From=2, to=3, Qty=8, Trav=3, Col= 3, inv=17,succ=16,17,18,19,20,21,22; freq= 1, minspac= 4, maxspac= 4
+ arc=11, From=2, to=4, Qty=1, Trav=6, Col= 6, inv=24,succ=23,24,25,26,27,28,29; freq= 2, minspac= 2, maxspac= 2
+ arc=12, From=2, to=5, Qty=1, Trav=4, Col= 4, inv=31,succ=30,31,32,33,34,35,36; freq= 3, minspac= 1, maxspac= 3
+ arc=13, From=2, to=6, Qty=1, Trav=2, Col= 2, inv=38,succ=37,38,39,40,41,42,43; freq= 4, minspac= 2, maxspac= 2
+ arc=14, From=2, to=7, Qty=2, Trav=6, Col= 6, inv=45,succ=44,45,46,47,48,49,50; freq= 5, minspac= 1, maxspac= 1
+ arc=15, From=2, to=8, Qty=5, Trav=4, Col= 4, inv=52,succ=51,52,53,54,55,56,57; freq= 1, minspac= 1, maxspac= 4
+ arc=16, From=3, to=1, Qty=1, Trav=1, Col= 1, inv=3,succ=1,2,3,4,5,6,7,8; freq= 5, minspac= 1, maxspac= 1
+ arc=17, From=3, to=2, Qty=8, Trav=3, Col= 3, inv=10,succ=9,10,11,12,13,14,15; freq= 1, minspac= 1, maxspac= 2
+ arc=18, From=3, to=4, Qty=7, Trav=7, Col= 7, inv=25,succ=23,24,25,26,27,28,29; freq= 3, minspac= 1, maxspac= 2
+ arc=19, From=3, to=5, Qty=3, Trav=3, Col= 3, inv=32,succ=30,31,32,33,34,35,36; freq= 4, minspac= 1, maxspac= 1
+ arc=20, From=3, to=6, Qty=6, Trav=4, Col= 4, inv=39,succ=37,38,39,40,41,42,43; freq= 5, minspac= 1, maxspac= 1
+ arc=21, From=3, to=7, Qty=8, Trav=8, Col= 8, inv=46,succ=44,45,46,47,48,49,50; freq= 1, minspac= 1, maxspac= 4
+ arc=22, From=3, to=8, Qty=1, Trav=2, Col= 2, inv=53,succ=51,52,53,54,55,56,57; freq= 2, minspac= 3, maxspac= 3
+ arc=23, From=4, to=1, Qty=3, Trav=3, Col= 3, inv=4,succ=1,2,3,4,5,6,7,8; freq= 1, minspac= 3, maxspac= 3
+ arc=24, From=4, to=2, Qty=1, Trav=6, Col= 6, inv=11,succ=9,10,11,12,13,14,15; freq= 2, minspac= 3, maxspac= 3
+ arc=25, From=4, to=3, Qty=7, Trav=7, Col= 7, inv=18,succ=16,17,18,19,20,21,22; freq= 3, minspac= 1, maxspac= 1
+ arc=26, From=4, to=5, Qty=1, Trav=6, Col= 6, inv=33,succ=30,31,32,33,34,35,36; freq= 5, minspac= 1, maxspac= 1
+ arc=27, From=4, to=6, Qty=2, Trav=2, Col= 2, inv=40,succ=37,38,39,40,41,42,43; freq= 1, minspac= 1, maxspac= 1
+ arc=28, From=4, to=7, Qty=1, Trav=4, Col= 4, inv=47,succ=44,45,46,47,48,49,50; freq= 2, minspac= 1, maxspac= 1
+ arc=29, From=4, to=8, Qty=4, Trav=1, Col= 1, inv=54,succ=51,52,53,54,55,56,57; freq= 3, minspac= 1, maxspac= 1
+ arc=30, From=5, to=1, Qty=2, Trav=6, Col= 6, inv=5,succ=1,2,3,4,5,6,7,8; freq= 2, minspac= 1, maxspac= 1
+ arc=31, From=5, to=2, Qty=1, Trav=4, Col= 4, inv=12,succ=9,10,11,12,13,14,15; freq= 3, minspac= 1, maxspac= 1
+ arc=32, From=5, to=3, Qty=3, Trav=3, Col= 3, inv=19,succ=16,17,18,19,20,21,22; freq= 4, minspac= 1, maxspac= 1
+ arc=33, From=5, to=4, Qty=1, Trav=6, Col= 6, inv=26,succ=23,24,25,26,27,28,29; freq= 5, minspac= 1, maxspac= 1
+ arc=34, From=5, to=6, Qty=7, Trav=6, Col= 6, inv=41,succ=37,38,39,40,41,42,43; freq= 2, minspac= 2, maxspac= 2
+ arc=35, From=5, to=7, Qty=3, Trav=2, Col= 2, inv=48,succ=44,45,46,47,48,49,50; freq= 3, minspac= 2, maxspac= 2
+ arc=36, From=5, to=8, Qty=8, Trav=8, Col= 8, inv=55,succ=51,52,53,54,55,56,57; freq= 4, minspac= 1, maxspac= 1
+ arc=37, From=6, to=1, Qty=7, Trav=6, Col= 6, inv=6,succ=1,2,3,4,5,6,7,8; freq= 3, minspac= 2, maxspac= 2
+ arc=38, From=6, to=2, Qty=1, Trav=2, Col= 2, inv=13,succ=9,10,11,12,13,14,15; freq= 4, minspac= 1, maxspac= 2
+ arc=39, From=6, to=3, Qty=6, Trav=4, Col= 4, inv=20,succ=16,17,18,19,20,21,22; freq= 5, minspac= 1, maxspac= 1
+ arc=40, From=6, to=4, Qty=2, Trav=2, Col= 2, inv=27,succ=23,24,25,26,27,28,29; freq= 1, minspac= 5, maxspac= 5
+ arc=41, From=6, to=5, Qty=7, Trav=6, Col= 6, inv=34,succ=30,31,32,33,34,35,36; freq= 2, minspac= 4, maxspac= 4
+ arc=42, From=6, to=7, Qty=6, Trav=8, Col= 8, inv=49,succ=44,45,46,47,48,49,50; freq= 4, minspac= 1, maxspac= 1
+ arc=43, From=6, to=8, Qty=8, Trav=3, Col= 3, inv=56,succ=51,52,53,54,55,56,57; freq= 5, minspac= 1, maxspac= 1
+ arc=44, From=7, to=1, Qty=2, Trav=2, Col= 2, inv=7,succ=1,2,3,4,5,6,7,8; freq= 4, minspac= 1, maxspac= 1
+ arc=45, From=7, to=2, Qty=2, Trav=6, Col= 6, inv=14,succ=9,10,11,12,13,14,15; freq= 5, minspac= 1, maxspac= 1
+ arc=46, From=7, to=3, Qty=8, Trav=8, Col= 8, inv=21,succ=16,17,18,19,20,21,22; freq= 1, minspac= 2, maxspac= 5
+ arc=47, From=7, to=4, Qty=1, Trav=4, Col= 4, inv=28,succ=23,24,25,26,27,28,29; freq= 2, minspac= 3, maxspac= 3
+ arc=48, From=7, to=5, Qty=3, Trav=2, Col= 2, inv=35,succ=30,31,32,33,34,35,36; freq= 3, minspac= 1, maxspac= 1
+ arc=49, From=7, to=6, Qty=6, Trav=8, Col= 8, inv=42,succ=37,38,39,40,41,42,43; freq= 4, minspac= 2, maxspac= 2
+ arc=50, From=7, to=8, Qty=7, Trav=7, Col= 7, inv=57,succ=51,52,53,54,55,56,57; freq= 1, minspac= 2, maxspac= 3
+ arc=51, From=8, to=1, Qty=3, Trav=1, Col= 1, inv=8,succ=1,2,3,4,5,6,7,8; freq= 5, minspac= 1, maxspac= 1
+ arc=52, From=8, to=2, Qty=5, Trav=4, Col= 4, inv=15,succ=9,10,11,12,13,14,15; freq= 1, minspac= 3, maxspac= 3
+ arc=53, From=8, to=3, Qty=1, Trav=2, Col= 2, inv=22,succ=16,17,18,19,20,21,22; freq= 2, minspac= 2, maxspac= 2
+ arc=54, From=8, to=4, Qty=4, Trav=1, Col= 1, inv=29,succ=23,24,25,26,27,28,29; freq= 3, minspac= 1, maxspac= 3
+ arc=55, From=8, to=5, Qty=8, Trav=8, Col= 8, inv=36,succ=30,31,32,33,34,35,36; freq= 4, minspac= 1, maxspac= 1
+ arc=56, From=8, to=6, Qty=8, Trav=3, Col= 3, inv=43,succ=37,38,39,40,41,42,43; freq= 5, minspac= 1, maxspac= 1
+ arc=57, From=8, to=7, Qty=7, Trav=7, Col= 7, inv=50,succ=44,45,46,47,48,49,50; freq= 1, minspac= 1, maxspac= 1

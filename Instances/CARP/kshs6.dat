@@ -1,0 +1,26 @@
+ NOMBRE : kshs6
+ COMENTARIO : 51150.000000 (cota superior) 
+ VERTICES : 9
+ ARISTAS_REQ : 15
+ ARISTAS_NOREQ : 0
+ VEHICULOS : 3
+ CAPACIDAD : 150
+ TIPO_COSTES_ARISTAS : EXPLICITOS
+ COSTE_TOTAL_REQ : 8525
+ LISTA_ARISTAS_REQ :
+ ( 1, 2)  coste 514 demanda 11
+ ( 1, 3)  coste 490 demanda 52
+ ( 1, 6)  coste 447 demanda 4
+ ( 1, 9)  coste 330 demanda 16
+ ( 2, 3)  coste 132 demanda 4
+ ( 2, 4)  coste 696 demanda 4
+ ( 2, 5)  coste 440 demanda 35
+ ( 3, 5)  coste 311 demanda 38
+ ( 3, 7)  coste 747 demanda 1
+ ( 3, 8)  coste 814 demanda 43
+ ( 3, 9)  coste 815 demanda 30
+ ( 4, 7)  coste 924 demanda 45
+ ( 4, 8)  coste 958 demanda 21
+ ( 5, 6)  coste 132 demanda 19
+ ( 6, 9)  coste 775 demanda 66
+ DEPOSITO :   1

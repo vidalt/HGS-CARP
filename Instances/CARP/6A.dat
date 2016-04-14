@@ -1,0 +1,61 @@
+ NOMBRE : val6A   
+ COMENTARIO : 337 (cota superior)
+ VERTICES :  31
+ ARISTAS_REQ :   50
+ ARISTAS_NOREQ :    0
+ VEHICULOS :  3
+ CAPACIDAD :   170
+ TIPO_COSTES_ARISTAS : EXPLICITOS
+ COSTE_TOTAL_REQ :   297
+ LISTA_ARISTAS_REQ : 
+ (  1,  2)   coste     2   demanda     5
+ (  1,  7)   coste    10   demanda    13
+ (  1, 30)   coste     4   demanda    12
+ (  1, 31)   coste     3   demanda     4
+ (  2,  3)   coste     1   demanda    14
+ (  2,  8)   coste     6   demanda    14
+ (  3,  4)   coste     5   demanda    12
+ (  3,  9)   coste     2   demanda     5
+ (  4,  9)   coste     9   demanda     3
+ (  4, 13)   coste     3   demanda     8
+ (  5,  6)   coste     3   demanda     8
+ (  5, 10)   coste     4   demanda    10
+ (  5, 31)   coste     1   demanda     4
+ (  6,  7)   coste     3   demanda     9
+ (  6, 11)   coste     2   demanda    12
+ (  6, 31)   coste     3   demanda     9
+ (  7,  8)   coste     3   demanda    14
+ (  8,  9)   coste     7   demanda    12
+ (  8, 12)   coste     8   demanda    14
+ (  9, 13)   coste     6   demanda     9
+ ( 10, 11)   coste     4   demanda    10
+ ( 10, 14)   coste     1   demanda     4
+ ( 10, 16)   coste     2   demanda     8
+ ( 11, 12)   coste     5   demanda     9
+ ( 11, 17)   coste     4   demanda    10
+ ( 12, 13)   coste     4   demanda     7
+ ( 12, 18)   coste     5   demanda    12
+ ( 13, 19)   coste     6   demanda    14
+ ( 14, 15)   coste     5   demanda     7
+ ( 15, 16)   coste     3   demanda     8
+ ( 16, 17)   coste     2   demanda     9
+ ( 18, 19)   coste     5   demanda     9
+ ( 18, 21)   coste     3   demanda     7
+ ( 19, 20)   coste     4   demanda    12
+ ( 19, 21)   coste     3   demanda     8
+ ( 19, 22)   coste     2   demanda     9
+ ( 20, 22)   coste     5   demanda    11
+ ( 21, 22)   coste     4   demanda    14
+ ( 23, 24)   coste     3   demanda    10
+ ( 23, 25)   coste     3   demanda     7
+ ( 23, 26)   coste     2   demanda     6
+ ( 24, 27)   coste     2   demanda     5
+ ( 25, 28)   coste     5   demanda    12
+ ( 26, 27)   coste     1   demanda     3
+ ( 26, 28)   coste     5   demanda    13
+ ( 27, 29)   coste     2   demanda     8
+ ( 28, 29)   coste     3   demanda     9
+ ( 28, 31)   coste     3   demanda     4
+ ( 29, 30)   coste     7   demanda    10
+ ( 29, 31)   coste     2   demanda     5
+ DEPOSITO :   1

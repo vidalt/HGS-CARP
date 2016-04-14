@@ -1,0 +1,25 @@
+ NOMBRE :P1218
+ COMENTARIO :  
+ VERTICES :  7
+ ARISTAS_REQ :  5
+ ARISTAS_NOREQ : 13
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste    1     1
+ (  1,  3)   coste    6     3
+ (  2,  3)   coste    1     5
+ (  4,  5)   coste    5     1
+ (  6,  7)   coste    1     3
+ LISTA_ARISTAS_NOREQ :
+ (  1,  7)   coste    2     3
+ (  2,  4)   coste    1     1
+ (  2,  5)   coste    4     3
+ (  2,  6)   coste    2     1
+ (  2,  7)   coste    5     3
+ (  3,  4)   coste    1     5
+ (  3,  5)   coste    4     2
+ (  3,  6)   coste    1     2
+ (  3,  7)   coste    5     1
+ (  4,  6)   coste    1     1
+ (  4,  7)   coste    4     5
+ (  5,  6)   coste    1     5
+ (  5,  7)   coste    3     1

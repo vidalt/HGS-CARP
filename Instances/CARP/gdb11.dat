@@ -1,0 +1,56 @@
+ NOMBRE : gdb11
+ COMENTARIO : 10000 (cota superior) 
+ VERTICES : 22
+ ARISTAS_REQ : 45
+ ARISTAS_NOREQ : 0
+ VEHICULOS : 5
+ CAPACIDAD : 50
+ TIPO_COSTES_ARISTAS : EXPLICITOS
+ COSTE_TOTAL_REQ : 356
+ LISTA_ARISTAS_REQ :
+ ( 1, 8)  coste 9 demanda 4
+ ( 1, 9)  coste 4 demanda 6
+ ( 1, 10)  coste 13 demanda 1
+ ( 1, 11)  coste 12 demanda 3
+ ( 2, 1)  coste 11 demanda 9
+ ( 2, 3)  coste 15 demanda 1
+ ( 2, 4)  coste 18 demanda 5
+ ( 2, 5)  coste 8 demanda 4
+ ( 2, 22)  coste 2 demanda 6
+ ( 3, 4)  coste 8 demanda 1
+ ( 3, 8)  coste 18 demanda 6
+ ( 3, 9)  coste 6 demanda 5
+ ( 3, 21)  coste 2 demanda 1
+ ( 4, 1)  coste 7 demanda 7
+ ( 4, 6)  coste 10 demanda 5
+ ( 4, 11)  coste 17 demanda 4
+ ( 5, 1)  coste 9 demanda 9
+ ( 5, 6)  coste 15 demanda 4
+ ( 5, 14)  coste 2 demanda 3
+ ( 6, 11)  coste 3 demanda 5
+ ( 6, 15)  coste 2 demanda 2
+ ( 7, 2)  coste 6 demanda 8
+ ( 7, 4)  coste 11 demanda 5
+ ( 7, 5)  coste 5 demanda 3
+ ( 7, 13)  coste 2 demanda 1
+ ( 8, 9)  coste 14 demanda 9
+ ( 8, 12)  coste 5 demanda 2
+ ( 8, 20)  coste 2 demanda 8
+ ( 9, 10)  coste 19 demanda 3
+ ( 9, 19)  coste 2 demanda 7
+ ( 10, 12)  coste 2 demanda 7
+ ( 10, 18)  coste 2 demanda 8
+ ( 11, 12)  coste 7 demanda 6
+ ( 11, 16)  coste 2 demanda 2
+ ( 12, 17)  coste 2 demanda 9
+ ( 13, 14)  coste 5 demanda 7
+ ( 13, 22)  coste 6 demanda 2
+ ( 14, 15)  coste 15 demanda 9
+ ( 15, 16)  coste 3 demanda 3
+ ( 16, 17)  coste 7 demanda 6
+ ( 17, 18)  coste 2 demanda 8
+ ( 18, 19)  coste 19 demanda 3
+ ( 19, 20)  coste 6 demanda 2
+ ( 20, 21)  coste 6 demanda 8
+ ( 21, 22)  coste 15 demanda 7
+ DEPOSITO :   1

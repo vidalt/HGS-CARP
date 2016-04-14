@@ -1,0 +1,39 @@
+ NOMBRE : gdb16
+ COMENTARIO : 10000 (cota superior) 
+ VERTICES : 8
+ ARISTAS_REQ : 28
+ ARISTAS_NOREQ : 0
+ VEHICULOS : 5
+ CAPACIDAD : 24
+ TIPO_COSTES_ARISTAS : EXPLICITOS
+ COSTE_TOTAL_REQ : 119
+ LISTA_ARISTAS_REQ :
+ ( 1, 2)  coste 4 demanda 8
+ ( 1, 3)  coste 1 demanda 1
+ ( 1, 4)  coste 3 demanda 3
+ ( 1, 5)  coste 6 demanda 2
+ ( 1, 6)  coste 6 demanda 7
+ ( 1, 7)  coste 2 demanda 2
+ ( 1, 8)  coste 1 demanda 3
+ ( 2, 3)  coste 3 demanda 8
+ ( 2, 4)  coste 6 demanda 1
+ ( 2, 5)  coste 4 demanda 1
+ ( 2, 6)  coste 2 demanda 1
+ ( 2, 7)  coste 6 demanda 2
+ ( 2, 8)  coste 4 demanda 5
+ ( 3, 4)  coste 7 demanda 7
+ ( 3, 5)  coste 3 demanda 3
+ ( 3, 6)  coste 4 demanda 6
+ ( 3, 7)  coste 8 demanda 8
+ ( 3, 8)  coste 2 demanda 1
+ ( 4, 5)  coste 6 demanda 1
+ ( 4, 6)  coste 2 demanda 2
+ ( 4, 7)  coste 4 demanda 1
+ ( 4, 8)  coste 1 demanda 4
+ ( 5, 6)  coste 6 demanda 7
+ ( 5, 7)  coste 2 demanda 3
+ ( 5, 8)  coste 8 demanda 8
+ ( 6, 7)  coste 8 demanda 6
+ ( 6, 8)  coste 3 demanda 8
+ ( 7, 8)  coste 7 demanda 7
+ DEPOSITO :   1

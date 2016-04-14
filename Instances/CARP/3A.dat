@@ -1,0 +1,46 @@
+ NOMBRE : val3A   
+ COMENTARIO : 108 (cota superior)
+ VERTICES :  24
+ ARISTAS_REQ :   35
+ ARISTAS_NOREQ :    0
+ VEHICULOS :  2
+ CAPACIDAD :    80
+ TIPO_COSTES_ARISTAS : EXPLICITOS
+ COSTE_TOTAL_REQ :    89
+ LISTA_ARISTAS_REQ : 
+ (  1,  2)   coste     2   demanda     4
+ (  1,  3)   coste     1   demanda     3
+ (  2,  4)   coste     1   demanda     3
+ (  3,  4)   coste     2   demanda     4
+ (  3,  9)   coste     1   demanda     1
+ (  4,  5)   coste     2   demanda     6
+ (  5,  6)   coste     3   demanda     5
+ (  5, 10)   coste     2   demanda     4
+ (  5, 11)   coste     4   demanda     4
+ (  6,  7)   coste     3   demanda     5
+ (  6, 12)   coste     1   demanda     3
+ (  7,  8)   coste     1   demanda     6
+ (  8, 14)   coste     3   demanda     7
+ (  9, 10)   coste     2   demanda     2
+ (  9, 19)   coste     1   demanda     3
+ ( 10, 11)   coste     3   demanda     5
+ ( 10, 20)   coste     2   demanda     4
+ ( 11, 12)   coste     1   demanda     3
+ ( 11, 15)   coste     1   demanda     4
+ ( 12, 13)   coste     1   demanda     2
+ ( 12, 16)   coste     1   demanda     1
+ ( 13, 14)   coste     2   demanda     4
+ ( 13, 17)   coste     3   demanda     5
+ ( 14, 18)   coste     3   demanda     6
+ ( 15, 16)   coste     1   demanda     3
+ ( 15, 21)   coste     1   demanda     4
+ ( 16, 17)   coste     4   demanda     4
+ ( 17, 18)   coste     1   demanda     3
+ ( 19, 20)   coste     1   demanda     2
+ ( 19, 22)   coste     3   demanda     7
+ ( 20, 21)   coste     2   demanda     4
+ ( 20, 23)   coste     1   demanda     4
+ ( 21, 24)   coste     1   demanda     3
+ ( 22, 23)   coste     3   demanda     4
+ ( 23, 24)   coste     1   demanda     5
+ DEPOSITO :   1

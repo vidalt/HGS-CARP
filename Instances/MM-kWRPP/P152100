@@ -1,0 +1,44 @@
+ NOMBRE :P152*
+ COMENTARIO :  
+ VERTICES : 26
+ ARISTAS_REQ : 19
+ ARISTAS_NOREQ : 18
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste  100    81
+ (  3,  4)   coste   96    79
+ (  4,  5)   coste   99    24
+ (  6,  7)   coste   61    58
+ (  7,  8)   coste    7    66
+ (  8,  9)   coste   95    98
+ ( 10, 12)   coste   21     7
+ ( 11, 12)   coste    7    83
+ ( 12, 13)   coste   11    62
+ ( 14, 15)   coste   16     6
+ ( 16, 17)   coste    5    47
+ ( 17, 18)   coste   72    82
+ ( 19, 20)   coste   89     8
+ ( 20, 21)   coste   35    31
+ ( 20, 22)   coste   82     7
+ ( 22, 23)   coste   38    70
+ ( 24, 25)   coste   89    97
+ ( 24, 26)   coste    5    92
+ ( 25, 26)   coste   83    37
+ LISTA_ARISTAS_NOREQ :
+ (  1,  4)   coste   17    19
+ (  1, 25)   coste   61    11
+ (  4, 16)   coste   37    68
+ (  4, 26)   coste   56    57
+ (  6,  9)   coste   27     9
+ (  6, 10)   coste   31    77
+ (  6, 16)   coste   64    52
+ (  7,  9)   coste   48    39
+ ( 10, 14)   coste    3    49
+ ( 10, 16)   coste   39    11
+ ( 11, 15)   coste   24    75
+ ( 13, 21)   coste   25    18
+ ( 15, 19)   coste   30    11
+ ( 16, 26)   coste   10    48
+ ( 17, 24)   coste   47    43
+ ( 18, 24)   coste   38     1
+ ( 19, 23)   coste   22    23
+ ( 21, 22)   coste   25    78

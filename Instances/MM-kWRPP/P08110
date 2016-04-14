@@ -1,0 +1,47 @@
+ NOMBRE :P081*
+ COMENTARIO :  
+ VERTICES : 17
+ ARISTAS_REQ : 24
+ ARISTAS_NOREQ : 16
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste    4     4
+ (  1,  9)   coste    5     6
+ (  1, 10)   coste    5     4
+ (  2,  3)   coste    1     1
+ (  3,  4)   coste   10     7
+ (  3, 10)   coste    8     1
+ (  4,  5)   coste    4     2
+ (  5,  6)   coste    2     5
+ (  5,  8)   coste    9     6
+ (  6,  7)   coste    3     1
+ (  7,  8)   coste   13     7
+ (  7,  9)   coste    4     2
+ (  7, 10)   coste    1     2
+ (  8,  9)   coste    2     6
+ ( 11, 12)   coste    1     1
+ ( 12, 13)   coste    4     8
+ ( 13, 14)   coste    1     1
+ ( 13, 16)   coste    2     7
+ ( 14, 15)   coste    5     1
+ ( 14, 16)   coste    7     5
+ ( 15, 17)   coste    9     3
+ ( 16, 17)   coste    3     4
+ ( 11, 17)   coste    2     8
+ ( 11, 16)   coste    5    10
+ LISTA_ARISTAS_NOREQ :
+ (  2,  4)   coste    1     3
+ (  3,  6)   coste    1     6
+ (  4, 11)   coste   12     6
+ (  4, 12)   coste    9     9
+ (  4, 17)   coste   16    11
+ (  5, 11)   coste   15    14
+ (  5, 15)   coste   12    13
+ (  5, 17)   coste   12    11
+ (  8, 11)   coste    8     8
+ (  8, 12)   coste    7    13
+ (  8, 15)   coste   12    10
+ (  8, 17)   coste    6     9
+ (  9, 15)   coste   15    12
+ (  9, 17)   coste   13    14
+ ( 12, 16)   coste    4     1
+ ( 15, 16)   coste    6     4

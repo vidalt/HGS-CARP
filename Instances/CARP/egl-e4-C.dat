@@ -1,0 +1,109 @@
+ NOMBRE : egl-e4-C
+ COMENTARIO : 11824. (cota superior)
+ VERTICES : 77
+ ARISTAS_REQ : 98
+ ARISTAS_NOREQ : 0
+ VEHICULOS : 19
+ CAPACIDAD : 130
+ TIPO_COSTES_ARISTAS : EXPLICITOS 
+ COSTE_TOTAL_REQ : 2453
+ LISTA_ARISTAS_REQ :
+ ( 1, 2)   coste 32   demanda 32
+ ( 2, 3)   coste 14   demanda 14
+ ( 2, 4)   coste 17   demanda 17
+ ( 4, 5)   coste 56   demanda 56
+ ( 5, 6)   coste 8   demanda 8
+ ( 5, 7)   coste 6   demanda 6
+ ( 7, 8)   coste 18   demanda 18
+ ( 8, 9)   coste 26   demanda 26
+ ( 9, 10)   coste 20   demanda 20
+ ( 10, 11)   coste 12   demanda 12
+ ( 11, 12)   coste 32   demanda 32
+ ( 12, 16)   coste 29   demanda 29
+ ( 13, 16)   coste 13   demanda 13
+ ( 13, 14)   coste 7   demanda 7
+ ( 14, 15)   coste 7   demanda 7
+ ( 13, 77)   coste 12   demanda 12
+ ( 15, 17)   coste 26   demanda 26
+ ( 15, 18)   coste 38   demanda 38
+ ( 18, 19)   coste 41   demanda 41
+ ( 19, 20)   coste 32   demanda 32
+ ( 18, 20)   coste 21   demanda 21
+ ( 19, 21)   coste 38   demanda 38
+ ( 21, 22)   coste 17   demanda 17
+ ( 22, 75)   coste 24   demanda 24
+ ( 22, 24)   coste 4   demanda 4
+ ( 24, 25)   coste 27   demanda 27
+ ( 25, 75)   coste 16   demanda 16
+ ( 25, 26)   coste 17   demanda 17
+ ( 23, 26)   coste 12   demanda 12
+ ( 26, 27)   coste 15   demanda 15
+ ( 26, 28)   coste 18   demanda 18
+ ( 28, 29)   coste 16   demanda 16
+ ( 25, 29)   coste 27   demanda 27
+ ( 30, 31)   coste 14   demanda 14
+ ( 23, 31)   coste 40   demanda 40
+ ( 31, 32)   coste 58   demanda 58
+ ( 32, 33)   coste 30   demanda 30
+ ( 32, 34)   coste 43   demanda 43
+ ( 32, 35)   coste 86   demanda 86
+ ( 33, 36)   coste 27   demanda 27
+ ( 33, 37)   coste 75   demanda 75
+ ( 37, 38)   coste 8   demanda 8
+ ( 37, 39)   coste 21   demanda 21
+ ( 39, 40)   coste 5   demanda 5
+ ( 35, 39)   coste 7   demanda 7
+ ( 35, 41)   coste 15   demanda 15
+ ( 40, 41)   coste 9   demanda 9
+ ( 41, 42)   coste 18   demanda 18
+ ( 42, 43)   coste 11   demanda 11
+ ( 43, 44)   coste 78   demanda 78
+ ( 44, 45)   coste 12   demanda 12
+ ( 45, 46)   coste 12   demanda 12
+ ( 44, 46)   coste 13   demanda 13
+ ( 46, 47)   coste 33   demanda 33
+ ( 47, 48)   coste 10   demanda 10
+ ( 11, 48)   coste 79   demanda 79
+ ( 47, 49)   coste 9   demanda 9
+ ( 49, 50)   coste 8   demanda 8
+ ( 49, 51)   coste 10   demanda 10
+ ( 50, 52)   coste 2   demanda 2
+ ( 51, 53)   coste 4   demanda 4
+ ( 52, 53)   coste 4   demanda 4
+ ( 52, 54)   coste 4   demanda 4
+ ( 24, 53)   coste 24   demanda 24
+ ( 19, 50)   coste 30   demanda 30
+ ( 55, 56)   coste 6   demanda 6
+ ( 42, 56)   coste 26   demanda 26
+ ( 42, 57)   coste 14   demanda 14
+ ( 57, 58)   coste 78   demanda 78
+ ( 58, 59)   coste 25   demanda 25
+ ( 11, 59)   coste 78   demanda 78
+ ( 58, 60)   coste 33   demanda 33
+ ( 60, 61)   coste 39   demanda 39
+ ( 60, 62)   coste 23   demanda 23
+ ( 62, 63)   coste 30   demanda 30
+ ( 63, 64)   coste 9   demanda 9
+ ( 63, 65)   coste 21   demanda 21
+ ( 62, 66)   coste 16   demanda 16
+ ( 66, 68)   coste 45   demanda 45
+ ( 58, 69)   coste 32   demanda 32
+ ( 59, 69)   coste 11   demanda 11
+ ( 4, 69)   coste 75   demanda 75
+ ( 70, 71)   coste 56   demanda 56
+ ( 71, 72)   coste 6   demanda 6
+ ( 71, 73)   coste 5   demanda 5
+ ( 72, 73)   coste 5   demanda 5
+ ( 73, 74)   coste 25   demanda 25
+ ( 18, 72)   coste 92   demanda 92
+ ( 56, 67)   coste 36   demanda 36
+ ( 23, 75)   coste 17   demanda 17
+ ( 12, 76)   coste 7   demanda 7
+ ( 20, 76)   coste 8   demanda 8
+ ( 15, 77)   coste 13   demanda 13
+ ( 76, 77)   coste 35   demanda 35
+ ( 21, 51)   coste 2   demanda 2
+ ( 44, 59)   coste 28   demanda 28
+ ( 60, 67)   coste 29   demanda 29
+ ( 62, 67)   coste 31   demanda 31
+ DEPOSITO :   1

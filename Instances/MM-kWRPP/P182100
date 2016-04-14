@@ -1,0 +1,44 @@
+ NOMBRE :P182*
+ COMENTARIO :  
+ VERTICES : 23
+ ARISTAS_REQ : 16
+ ARISTAS_NOREQ : 21
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste    3     4
+ (  3,  4)   coste   16    72
+ (  4,  5)   coste   22    97
+ (  5,  6)   coste   95    57
+ (  5,  7)   coste   92    64
+ (  8,  9)   coste   65    93
+ ( 10, 11)   coste   63    90
+ ( 10, 12)   coste   21    20
+ ( 11, 12)   coste   63    31
+ ( 12, 13)   coste   48     6
+ ( 14, 15)   coste   66    81
+ ( 16, 17)   coste   18    84
+ ( 17, 18)   coste   77    47
+ ( 18, 19)   coste   92    34
+ ( 20, 21)   coste    5    57
+ ( 22, 23)   coste   58    98
+ LISTA_ARISTAS_NOREQ :
+ (  1, 23)   coste    7    21
+ (  2,  7)   coste    9    72
+ (  2, 19)   coste   68    83
+ (  2, 22)   coste   95    52
+ (  3,  7)   coste   36    88
+ (  4,  8)   coste   52    65
+ (  4, 12)   coste   58    94
+ (  6, 18)   coste   94    18
+ (  7, 19)   coste   83    17
+ (  7, 22)   coste   77    14
+ (  8, 16)   coste   79    26
+ (  9, 10)   coste    2     7
+ ( 11, 14)   coste   82    89
+ ( 12, 16)   coste   90    21
+ ( 12, 17)   coste   62    66
+ ( 13, 15)   coste   22    93
+ ( 16, 18)   coste   42    94
+ ( 17, 19)   coste    3    57
+ ( 17, 20)   coste   65    73
+ ( 19, 22)   coste    4    88
+ ( 21, 22)   coste   33    98

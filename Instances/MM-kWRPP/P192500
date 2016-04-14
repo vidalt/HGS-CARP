@@ -1,0 +1,61 @@
+ NOMBRE :P192*
+ COMENTARIO :  
+ VERTICES : 33
+ ARISTAS_REQ : 29
+ ARISTAS_NOREQ : 25
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste   84    60
+ (  2,  3)   coste  358    64
+ (  2,  4)   coste  471   466
+ (  3,  4)   coste  247   209
+ (  4,  5)   coste  379   100
+ (  6,  7)   coste  152   418
+ (  6,  8)   coste  340   155
+ (  6,  9)   coste  145   169
+ ( 10, 11)   coste  445   308
+ ( 11, 12)   coste  225   455
+ ( 12, 13)   coste  216   327
+ ( 12, 14)   coste  450   294
+ ( 15, 16)   coste    2   342
+ ( 15, 17)   coste  158   302
+ ( 18, 20)   coste  378   172
+ ( 20, 21)   coste  390   417
+ ( 19, 21)   coste  150   345
+ ( 21, 23)   coste  247   222
+ ( 22, 23)   coste  224    76
+ ( 24, 26)   coste  154   220
+ ( 25, 26)   coste   60   436
+ ( 26, 27)   coste  391    44
+ ( 28, 29)   coste  426   338
+ ( 29, 30)   coste  110   150
+ ( 29, 31)   coste  379   157
+ ( 31, 32)   coste  262   230
+ ( 28, 32)   coste   77    46
+ ( 32, 33)   coste  105    54
+ (  8,  9)   coste   66   340
+ LISTA_ARISTAS_NOREQ :
+ (  1,  6)   coste  200   284
+ (  2, 25)   coste  441    71
+ (  3,  5)   coste   44   210
+ (  4, 25)   coste  467    45
+ (  5, 33)   coste  353   340
+ (  7, 10)   coste  461   469
+ (  9, 10)   coste  499   266
+ (  9, 31)   coste   28   449
+ ( 10, 12)   coste   15   326
+ ( 11, 16)   coste  222   254
+ ( 13, 14)   coste  132   100
+ ( 14, 16)   coste  114   492
+ ( 14, 30)   coste   76    10
+ ( 14, 31)   coste  248   237
+ ( 17, 18)   coste  412   427
+ ( 18, 19)   coste   97   448
+ ( 19, 30)   coste  181   312
+ ( 20, 23)   coste  127   125
+ ( 22, 25)   coste  338   432
+ ( 24, 25)   coste  213     9
+ ( 25, 27)   coste  389    86
+ ( 25, 30)   coste   26   397
+ ( 25, 32)   coste  256   459
+ ( 28, 31)   coste   33    93
+ ( 30, 32)   coste  417   337

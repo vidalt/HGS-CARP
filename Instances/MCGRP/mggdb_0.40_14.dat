@@ -1,0 +1,64 @@
+Name:		mggdb_0.40_14
+Optimal value:	62
+#Vehicles:	5
+Capacity:	21
+Depot Node:	1
+#Nodes:		7
+#Edges:		5
+#Arcs:		32
+#Required N:	6
+#Required E:	3
+#Required A:	9
+
+ReN.	DEMAND	S. COST
+N2	10	10
+N3	9	9
+N4	5	5
+N5	5	5
+N6	15	15
+N7	3	3
+
+ReE.	FROM N.	TO N.	T. COST	DEMAND	S. COST
+E3	2	4	4	8	8
+E4	4	6	4	2	2
+E5	4	7	6	4	4
+
+EDGE	FROM N.	TO N.	T. COST
+NrE1	3	7	7
+NrE2	2	3	6
+
+ReA.	FROM N.	TO N.	T. COST	DEMAND	S. COST
+A8	5	7	5	3	3
+A9	3	4	8	2	2
+A10	1	2	1	1	1
+A11	4	5	4	3	3
+A12	3	5	1	5	5
+A13	1	5	2	4	4
+A14	2	5	1	1	1
+A15	2	7	7	6	6
+A16	1	3	2	3	3
+
+ARC	FROM N.	TO N.	T. COST
+NrA1	1	4	7
+NrA2	3	6	5
+NrA3	1	7	4
+NrA4	5	6	7
+NrA5	2	6	7
+NrA6	1	6	5
+NrA7	6	7	3
+NrA17	4	1	7
+NrA18	6	3	5
+NrA19	7	1	4
+NrA20	6	5	7
+NrA21	6	2	7
+NrA22	6	1	5
+NrA23	7	6	3
+NrA24	7	5	5
+NrA25	4	3	8
+NrA26	2	1	1
+NrA27	5	4	4
+NrA28	5	3	1
+NrA29	5	1	2
+NrA30	5	2	1
+NrA31	7	2	7
+NrA32	3	1	2

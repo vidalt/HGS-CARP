@@ -1,0 +1,20 @@
+ NOMBRE :P012*
+ COMENTARIO :  
+ VERTICES : 11
+ ARISTAS_REQ :  7
+ ARISTAS_NOREQ :  6
+ LISTA_ARISTAS_REQ :
+ (  1,  2)   coste  230    49
+ (  3,  4)   coste  422   115
+ (  3,  5)   coste   19   128
+ (  5,  6)   coste  309   459
+ (  7,  8)   coste  286    95
+ (  9, 10)   coste  292   332
+ ( 10, 11)   coste  204   432
+ LISTA_ARISTAS_NOREQ :
+ (  1, 10)   coste  351   338
+ (  2,  3)   coste   14     5
+ (  4,  5)   coste  130   271
+ (  4,  8)   coste  447   462
+ (  5, 11)   coste  122   177
+ (  6,  7)   coste  496   252
