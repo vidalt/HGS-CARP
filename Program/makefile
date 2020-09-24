@@ -1,7 +1,7 @@
 all : gencarp
 
 CCC = g++
-CCFLAGS = -O3
+CCFLAGS = -O3 -std=c++14
 LIBS= -lm
 TARGETDIR=.
 CPPFLAGS += \
