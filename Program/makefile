@@ -1,9 +1,9 @@
 all : gencarp
 
 CCC = g++
-CCFLAGS =-DTURN_PENALTIES=1 -Wall -std=c++14 -g -Ofast -I/usr/local/opt/openssl/include/
-LDFLAGS =-Wall -std=c++14 -g -O0 -L/usr/local/opt/openssl/lib/
-LIBS= -lm -lcrypto
+CCFLAGS =-DTURN_PENALTIES=1 -Wall -std=c++14 -g -Ofast
+LDFLAGS =-Wall -std=c++14 -g -Ofast
+LIBS= -lm
 TARGETDIR=.
 CPPFLAGS += \
          -I.

@@ -69,6 +69,9 @@ public:
 
 	// path to the BKS (just to read the value and overwrite if needed)
 	string pathToBKS ;
+    
+    // path to distance matrix (used as a cache for calculations)
+    string pathToDistanceMatrix;
 
 	// Problem type
 	/*
@@ -218,7 +221,7 @@ public:
 	void shuffleProches () ;
 
 	// constructor
-	Params(string nomInstance, string nomSolution, string nomBKS, int seedRNG, int type, int nbVeh, int nbDep, bool isSearchingFeasible);
+	Params(string nomInstance, string nomSolution, string nomBKS, string nomDistMat, int seedRNG, int type, int nbVeh, int nbDep, bool isSearchingFeasible);
 
 	// destructor
 	~Params(void);

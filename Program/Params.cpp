@@ -21,7 +21,6 @@
 #include <sstream>
 #include <iomanip>
 #include <chrono>
-#include <openssl/sha.h>
 
 void Params::setMethodParams()
 {
@@ -604,12 +603,13 @@ void Params::setPatterns_PCARP(Client& myCli)
 	}
 }
 
-Params::Params(string nomInstance, string nomSolution, string nomBKS, int seedRNG, int type, int nbVeh, int nbDep, bool isSearchingFeasible):type(type), nbVehiculesPerDep(nbVeh), nbDepots(nbDep), isSearchingFeasible(isSearchingFeasible)
+Params::Params(string nomInstance, string nomSolution, string nomBKS, string nomDistMat, int seedRNG, int type, int nbVeh, int nbDep, bool isSearchingFeasible):type(type), nbVehiculesPerDep(nbVeh), nbDepots(nbDep), isSearchingFeasible(isSearchingFeasible)
 {
 	// Main constructor of Params
 	pathToInstance = nomInstance ;
 	pathToSolution = nomSolution ;
 	pathToBKS = nomBKS ;
+    pathToDistanceMatrix = nomDistMat;
 	borne = 2.0 ;
 	sizeSD = 10 ;
 
@@ -735,38 +735,15 @@ void Params::ar_computeDistancesNodes()
 	cout << "Computing distance nodes finished" << endl;
 }
 
-string to_hex(unsigned char s) {
-    stringstream ss;
-    ss << hex << (int) s;
-    return ss.str();
-}
-
 void Params::ar_computeDistancesArcs()
 {
-    //see if a matrix is alredy precomputed. calculate SHA2 over the initial matrix
-    unsigned char hash[SHA256_DIGEST_LENGTH];
-    double* tmp = (double*) malloc(sizeof(double)*ar_nbArcsDistance);
-    SHA256_CTX sha256;
-    SHA256_Init(&sha256);
-    for (int i=0; i < ar_nbArcsDistance ; i++) {
-        for (int j=0; j < ar_nbArcsDistance ; j++) {
-            tmp[j] = ar_distanceArcs.at(i).at(j);
-        }
-        SHA256_Update(&sha256, (char*)tmp, sizeof(double)*ar_nbArcsDistance);
-    }
-    free(tmp);
-    SHA256_Final(hash, &sha256);
-    string output = "";
-    for(int i = 0; i < SHA256_DIGEST_LENGTH; i++) {
-        output += to_hex(hash[i]);
-    }
-    cout << "Hash for distance Matrix: \"" << output << endl;
-    
     ifstream rmat;
     string continu;
-    rmat.open((output + ".mat").c_str());
+    if (pathToDistanceMatrix != "") {
+        rmat.open(pathToDistanceMatrix.c_str());
+    }
     if (rmat.good()) {
-        cout << "Found matrix. restoring" << flush;
+        cout << "Found matrix. restoring" << endl;
         cout << "Progress: 0.000%\r" << flush;
         double last_perc = 0.0;
         auto start = chrono::system_clock::now();
@@ -815,16 +792,19 @@ void Params::ar_computeDistancesArcs()
             }
         }
     
-        ofstream distance_matrix;
-        distance_matrix.open((output + ".mat").c_str());
-        if (distance_matrix.good()) {
-            for (int k=0 ; k < ar_nbArcsDistance ; k++) {
-                for (int i=0; i < ar_nbArcsDistance ; i++) {
-                    distance_matrix << ar_distanceArcs[k][i] << " ";
+        if (pathToDistanceMatrix != "")
+        {
+            ofstream distance_matrix;
+            distance_matrix.open(pathToDistanceMatrix.c_str());
+            if (distance_matrix.good()) {
+                for (int k=0 ; k < ar_nbArcsDistance ; k++) {
+                    for (int i=0; i < ar_nbArcsDistance ; i++) {
+                        distance_matrix << ar_distanceArcs.at(k).at(i) << " ";
+                    }
+                    distance_matrix << endl;
                 }
-                distance_matrix << endl;
+                distance_matrix.close();
             }
-            distance_matrix.close();
         }
     }
     

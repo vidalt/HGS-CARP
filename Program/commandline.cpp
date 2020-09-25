@@ -51,6 +51,7 @@ commandline::commandline(int argc, char* argv[])
 	// default values
 	instance_name = string(argv[1]);
 	SetDefaultOutput(string(argv[1]));
+    distance_matrix_name = "";
 	cpu_time = 300; // Five minutes is default CPU time
 	seed = 0;
 	type = -1 ;
@@ -58,22 +59,27 @@ commandline::commandline(int argc, char* argv[])
 	nbDep = -1 ;
 
 	// reading the commandline parameters
-	for ( int i = 2 ; i < argc ; i += 2 )
+	for ( int i = 2 ; i < argc-1 ; i += 2 )
 	{
-		if ( string(argv[i]) == "-t" )
+        string argument = string(argv[i]);
+        string value = string(argv[i+1]);
+        
+		if ( argument == "-t" )
 			cpu_time = atoi(argv[i+1]);
-		else if ( string(argv[i]) == "-sol" )
-			output_name = string(argv[i+1]);
-		else if ( string(argv[i]) == "-bks" )
-			BKS_name = string(argv[i+1]);
-		else if ( string(argv[i]) == "-seed" )
+		else if ( argument == "-sol" )
+			output_name = value;
+		else if ( argument == "-bks" )
+			BKS_name = value;
+		else if ( argument == "-seed" )
 			seed = atoi(argv[i+1]);
-		else if ( string(argv[i]) == "-type" )
+		else if ( argument == "-type" )
 			type = atoi(argv[i+1]);
-		else if ( string(argv[i]) == "-veh" )
+		else if ( argument == "-veh" )
 			nbVeh = atoi(argv[i+1]);
-		else if ( string(argv[i]) == "-dep" )
+		else if ( argument == "-dep" )
 			nbDep = atoi(argv[i+1]);
+        else if ( argument == "-dmat" )
+            distance_matrix_name = value;
 		else
 		{
 			cout << "Non-recognized command : " << string(argv[i]) << endl ;
@@ -127,6 +133,11 @@ string commandline::get_path_to_solution()
 string commandline::get_path_to_BKS()
 {
 	return BKS_name;
+}
+
+string commandline::get_path_to_distmat()
+{
+    return distance_matrix_name;
 }
 
 int commandline::get_type()
