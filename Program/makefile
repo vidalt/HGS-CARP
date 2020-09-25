@@ -1,8 +1,9 @@
 all : gencarp
 
 CCC = g++
-CCFLAGS = -O3 -std=c++14
-LIBS= -lm
+CCFLAGS =-DTURN_PENALTIES=1 -Wall -std=c++14 -g -Ofast -I/usr/local/opt/openssl/include/
+LDFLAGS =-Wall -std=c++14 -g -O0 -L/usr/local/opt/openssl/lib/
+LIBS= -lm -lcrypto
 TARGETDIR=.
 CPPFLAGS += \
          -I.
@@ -23,7 +24,7 @@ OBJS2 = \
         
 	
 $(TARGETDIR)/gencarp: $(OBJS2)
-	$(CCC)  $(CCFLAGS) -o $(TARGETDIR)/gencarp $(OBJS2)
+	$(CCC)  $(CCFLAGS) $(LDFLAGS) $(LIBS) -o $(TARGETDIR)/gencarp $(OBJS2)
 
 $(TARGETDIR)/Client.o: Client.h Client.cpp
 	$(CCC) $(CCFLAGS) $(CPPFLAGS) -c Client.cpp -o $(TARGETDIR)/Client.o

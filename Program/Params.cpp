@@ -17,6 +17,11 @@
 //  ---------------------------------------------------------------------- */
 
 #include "Params.h"
+#include <fstream>
+#include <sstream>
+#include <iomanip>
+#include <chrono>
+#include <openssl/sha.h>
 
 void Params::setMethodParams()
 {
@@ -730,21 +735,99 @@ void Params::ar_computeDistancesNodes()
 	cout << "Computing distance nodes finished" << endl;
 }
 
+string to_hex(unsigned char s) {
+    stringstream ss;
+    ss << hex << (int) s;
+    return ss.str();
+}
+
 void Params::ar_computeDistancesArcs()
 {
-	// computes the distance in the line graph (for the turn penalties)
-	// simple application of the Floyd Warshall algorithm
-	for (int k=0 ; k < ar_nbArcsDistance ; k++)
-	{
-		for (int i=0 ; i < ar_nbArcsDistance ; i++)
-		{
-			for (int j=0 ; j < ar_nbArcsDistance  ; j++)
-			{
-				if (ar_distanceArcs.at(i).at(k) + ar_distanceArcs.at(k).at(j) < ar_distanceArcs.at(i).at(j))
-					ar_distanceArcs.at(i).at(j) = ar_distanceArcs.at(i).at(k) + ar_distanceArcs.at(k).at(j) ;
-			}
-		}
-	}
+    //see if a matrix is alredy precomputed. calculate SHA2 over the initial matrix
+    unsigned char hash[SHA256_DIGEST_LENGTH];
+    double* tmp = (double*) malloc(sizeof(double)*ar_nbArcsDistance);
+    SHA256_CTX sha256;
+    SHA256_Init(&sha256);
+    for (int i=0; i < ar_nbArcsDistance ; i++) {
+        for (int j=0; j < ar_nbArcsDistance ; j++) {
+            tmp[j] = ar_distanceArcs.at(i).at(j);
+        }
+        SHA256_Update(&sha256, (char*)tmp, sizeof(double)*ar_nbArcsDistance);
+    }
+    free(tmp);
+    SHA256_Final(hash, &sha256);
+    string output = "";
+    for(int i = 0; i < SHA256_DIGEST_LENGTH; i++) {
+        output += to_hex(hash[i]);
+    }
+    cout << "Hash for distance Matrix: \"" << output << endl;
+    
+    ifstream rmat;
+    string continu;
+    rmat.open((output + ".mat").c_str());
+    if (rmat.good()) {
+        cout << "Found matrix. restoring" << flush;
+        cout << "Progress: 0.000%\r" << flush;
+        double last_perc = 0.0;
+        auto start = chrono::system_clock::now();
+        
+        for (int k=0 ; k < ar_nbArcsDistance ; k++) {
+            double current_perc = (float)k*100/(ar_nbArcsDistance);
+            if (current_perc-last_perc > 1.0) {
+                chrono::duration<double> elapsed = chrono::system_clock::now() - start;
+                double remainig_seconds = elapsed.count()/current_perc*(100.0-current_perc);
+                
+                cout << "Progress: " << current_perc << "%    [" << (int) remainig_seconds/60 << ":" << setfill('0') << setw(2) << (int) remainig_seconds % 60 << "] remaining                       \r" << flush;
+                last_perc = current_perc;
+            }
+            for (int i=0; i < ar_nbArcsDistance ; i++) {
+                rmat >> ar_distanceArcs.at(k).at(i);
+            }
+            getline(rmat,continu);
+        }
+        rmat.close();
+    }
+    else {
+        // computes the distance in the line graph (for the turn penalties)
+        // simple application of the Floyd Warshall algorithm
+        cout << "Computing distance args" << endl;
+        cout << "Progress: 0.000%\r" << flush;
+        double last_perc = 0.0;
+        auto start = chrono::system_clock::now();
+    
+        for (int k=0 ; k < ar_nbArcsDistance ; k++)
+        {
+            double current_perc = (float)k*100/(ar_nbArcsDistance);
+            if (current_perc-last_perc > 1.0) {
+                chrono::duration<double> elapsed = chrono::system_clock::now() - start;
+                double remainig_seconds = elapsed.count()/current_perc*(100.0-current_perc);
+                
+                cout << "Progress: " << current_perc << "%    [" << (int) remainig_seconds/60 << ":" << setfill('0') << setw(2) << (int) remainig_seconds % 60 << "] remaining                       \r" << flush;
+                last_perc = current_perc;
+            }
+            for (int i=0 ; i < ar_nbArcsDistance ; i++)
+            {
+                for (int j=0 ; j < ar_nbArcsDistance  ; j++)
+                {
+                    if (ar_distanceArcs.at(i).at(k) + ar_distanceArcs.at(k).at(j) < ar_distanceArcs.at(i).at(j))
+                        ar_distanceArcs.at(i).at(j) = ar_distanceArcs.at(i).at(k) + ar_distanceArcs.at(k).at(j) ;
+                }
+            }
+        }
+    
+        ofstream distance_matrix;
+        distance_matrix.open((output + ".mat").c_str());
+        if (distance_matrix.good()) {
+            for (int k=0 ; k < ar_nbArcsDistance ; k++) {
+                for (int i=0; i < ar_nbArcsDistance ; i++) {
+                    distance_matrix << ar_distanceArcs[k][i] << " ";
+                }
+                distance_matrix << endl;
+            }
+            distance_matrix.close();
+        }
+    }
+    
 
 	// Then, we would still like to include some distance information between services.
 	// The distance between two services is the minimum distance between one mode of each service
@@ -1080,6 +1163,15 @@ void Params::ar_parseOtherLinesNEARP_TP()
 				ar_distanceArcs.at(i).at(j) = ar_Arcs.at(i).cost ;
 		}
 	}
+    
+    // distance should be without turn penalty as default. will be overwritten below when parsing the turns
+    for (int i=0 ; i < ar_nbArcsDistance ; i++)
+    {
+        for (int j=0; j < ar_nbArcsDistance ; j++) {
+            if (ar_Arcs.at(i).nodeEnd == ar_Arcs.at(j).nodeBegin)
+                ar_distanceArcs.at(i).at(j) = ar_Arcs.at(i).cost;
+        }
+    }
 
 	/* PARSING THE TURNS */
 	getline(fichier, contenu);
