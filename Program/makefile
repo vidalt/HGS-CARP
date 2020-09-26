@@ -1,7 +1,8 @@
 all : gencarp
 
 CCC = g++
-CCFLAGS = -O3
+CCFLAGS =-DTURN_PENALTIES=1 -Wall -std=c++14 -g -Ofast
+LDFLAGS =-Wall -std=c++14 -g -Ofast
 LIBS= -lm
 TARGETDIR=.
 CPPFLAGS += \
@@ -23,7 +24,7 @@ OBJS2 = \
         
 	
 $(TARGETDIR)/gencarp: $(OBJS2)
-	$(CCC)  $(CCFLAGS) -o $(TARGETDIR)/gencarp $(OBJS2)
+	$(CCC)  $(CCFLAGS) $(LDFLAGS) $(LIBS) -o $(TARGETDIR)/gencarp $(OBJS2)
 
 $(TARGETDIR)/Client.o: Client.h Client.cpp
 	$(CCC) $(CCFLAGS) $(CPPFLAGS) -c Client.cpp -o $(TARGETDIR)/Client.o

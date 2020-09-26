@@ -54,6 +54,9 @@ class commandline
 
 		// BKS path (used to replace it if a better solution is found)
 		string BKS_name;
+    
+        // distance matrix path (used in case the user want's to specify a distance matrix to store and retore from
+        string distance_matrix_name;
 
 		// simple setters
         void SetDefaultOutput(string to_parse);
@@ -69,10 +72,11 @@ class commandline
         string get_path_to_instance();
         string get_path_to_solution();
         string get_path_to_BKS();
+        string get_path_to_distmat();
         int get_cpu_time();
-		int get_type();
-		int get_nbVeh();
-		int get_nbDep();
+	int get_type();
+	int get_nbVeh();
+	int get_nbDep();
         int get_seed();
 
         // say if the commandline is valid

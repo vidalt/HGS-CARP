@@ -69,6 +69,9 @@ public:
 
 	// path to the BKS (just to read the value and overwrite if needed)
 	string pathToBKS ;
+    
+    // path to distance matrix (used as a cache for calculations)
+    string pathToDistanceMatrix;
 
 	// Problem type
 	/*
@@ -139,10 +142,10 @@ public:
 	vector <int> nombreVehicules ;
 
 	// array containing the information of each separate client/service
-	Client * cli ;
+	vector<Client> cli ;
 
 	// travel time (was used for the CVRP) now its mainly used as an intermediate structure to compute the granular search proximity
-	double ** timeCost ;
+	vector<vector<double > > timeCost ;
 
 	// isCorrelated[i][j] returns true if and only if j is considered to be among the closest customers to i (granular search parameter)
 	vector < vector <bool> > isCorrelated ;
@@ -201,14 +204,14 @@ public:
 	int parsing_courNbArcs ;
 
 	// reading a customer from the stream
-	void getClient (int i, Client * myCli);
+	void getClient (int i);
 
 	// builds the other data structures (granular search etc...)
 	void calculeStructures () ;
 
 	// sets the good patterns for a customer
 	// part of the instance definition in the PCARP
-	void setPatterns_PCARP(Client * myCli);
+	void setPatterns_PCARP(Client& myCli);
 
 	// Used to initialize the data structures for multi-depot problems
 	// Each depot is considered as a day (it works in the same way in the local search and all components of the method)
@@ -218,7 +221,7 @@ public:
 	void shuffleProches () ;
 
 	// constructor
-	Params(string nomInstance, string nomSolution, string nomBKS, int seedRNG, int type, int nbVeh, int nbDep, bool isSearchingFeasible);
+	Params(string nomInstance, string nomSolution, string nomBKS, string nomDistMat, int seedRNG, int type, int nbVeh, int nbDep, bool isSearchingFeasible);
 
 	// destructor
 	~Params(void);

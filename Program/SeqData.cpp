@@ -94,8 +94,6 @@ void SeqData::concatOneAfterWithPathTracking(SeqData * seq,int Vcour, Individu *
 	vector<double> & distanceNodescli0 = params->ar_distanceNodes[lastCli->ar_nodesExtr0] ;
 	vector<double> & distanceNodescli1 = params->ar_distanceNodes[lastCli->ar_nodesExtr1] ;
 
-	pair <int,int> myPair ;
-
 	// All pairs shortest path pre-processing 
 	// This is hard coded to remain close to the original code (as in the original CARP this function was hard coded and only designed to report the best cost, and the path itself was computed in a little post-processing)
 	// See the NEARP-TP for a more concise version
