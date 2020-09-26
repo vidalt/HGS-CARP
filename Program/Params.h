@@ -221,10 +221,10 @@ public:
 	void shuffleProches () ;
     
     //write a distance matrix to disk
-    void writeDistanceMatrix (const vector<vector<double> >& matrix, string filename);
+    static void writeDistanceMatrix (const vector<vector<double> >& matrix, string filename);
     
     //read a distance matrix from disk returns false if reading failed
-    bool readDistanceMatrix (vector<vector<double> >& matrix, string filename);
+    static bool readDistanceMatrix (vector<vector<double> >& matrix, string filename);
 
 	// constructor
 	Params(string nomInstance, string nomSolution, string nomBKS, string nomDistMat, int seedRNG, int type, int nbVeh, int nbDep, bool isSearchingFeasible);

@@ -737,7 +737,7 @@ void Params::ar_computeDistancesNodes()
 
 void Params::ar_computeDistancesArcs()
 {
-    if (!readDistanceMatrix(ar_distanceArcs,pathToDistanceMatrix)) {
+    if (!Params::readDistanceMatrix(ar_distanceArcs,pathToDistanceMatrix)) {
         // computes the distance in the line graph (for the turn penalties)
         // simple application of the Floyd Warshall algorithm
         cout << "Computing distance args" << endl;
@@ -765,7 +765,7 @@ void Params::ar_computeDistancesArcs()
             }
         }
     
-        writeDistanceMatrix(ar_distanceArcs,pathToDistanceMatrix);
+        Params::writeDistanceMatrix(ar_distanceArcs,pathToDistanceMatrix);
     }
     
 
