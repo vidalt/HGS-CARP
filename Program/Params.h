@@ -219,6 +219,12 @@ public:
 	
 	// shuffle the lists of closest customers
 	void shuffleProches () ;
+    
+    //write a distance matrix to disk
+    static void writeDistanceMatrix (const vector<vector<double> >& matrix, string filename);
+    
+    //read a distance matrix from disk returns false if reading failed
+    static bool readDistanceMatrix (vector<vector<double> >& matrix, string filename);
 
 	// constructor
 	Params(string nomInstance, string nomSolution, string nomBKS, string nomDistMat, int seedRNG, int type, int nbVeh, int nbDep, bool isSearchingFeasible);

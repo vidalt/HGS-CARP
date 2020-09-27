@@ -41,7 +41,7 @@ void commandline::SetDefaultOutput(string to_parse)
 
 commandline::commandline(int argc, char* argv[])
 {
-	if (argc%2 != 0 || argc > 14 || argc < 2)
+	if (argc%2 != 0 || argc > 16 || argc < 2)
 	{
 		cout << "incorrect command line" << endl ;
 		command_ok = false;

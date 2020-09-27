@@ -20,7 +20,6 @@
 #include <fstream>
 #include <sstream>
 #include <iomanip>
-#include <chrono>
 
 void Params::setMethodParams()
 {
@@ -290,18 +289,6 @@ void Params::preleveDonnees (string nomInstance)
 	{
 		ar_parseOtherLinesCARP();
 		ar_computeDistancesNodes(); // We only need the distance between endpoints
-
-		bool has_components = false;
-		for (int i=0; i < ar_distanceNodes.size(); ++i) {
-			for(int j=0; j < ar_distanceNodes.at(i).size(); ++j) {
-				if (ar_distanceNodes.at(i).at(j) == 1.e20) {
-					has_components = true;
-				}
-			} 
-			if (has_components) {
-				throw string("The Provided Network has components, please make sure the network is connected");
-			}
-		}
 	}
 	else if (type == 31) // NEARP
 	{
@@ -688,31 +675,34 @@ void Params::ar_InitializeDistanceNodes()
 
 void Params::ar_computeDistancesNodes()
 {
-	cout << "Computing distance Nodes" << endl;
-	for (int ii = 1 ; ii <= ar_NodesNonRequired + ar_NodesRequired ; ii++)
-		ar_distanceNodes.at(ii).at(ii) = 0 ;
+    if (!Params::readDistanceMatrix(ar_distanceNodes,pathToDistanceMatrix)) {
+        cout << "Computing distance Nodes" << endl;
+        for (int ii = 1 ; ii <= ar_NodesNonRequired + ar_NodesRequired ; ii++)
+            ar_distanceNodes.at(ii).at(ii) = 0 ;
 
-	cout << "Progress: 0.000%\r" << flush;
+        cout << "Progress: 0.000%\r" << flush;
 
-	// simple application of the Floyd Warshall algorithm
-	double last_perc = 0.0;
+        // simple application of the Floyd Warshall algorithm
+        double last_perc = 0.0;
 
-	for (int k=1 ; k <= ar_NodesNonRequired + ar_NodesRequired ; k++)
-	{
-		double current_perc = (float)k*100/(ar_NodesNonRequired+ar_NodesRequired);
-		if (current_perc - last_perc > 1.0) {
-			cout << "Progress: " << current_perc << "%                        \r" << flush;
-			last_perc = current_perc;
-		}
-		for (int i=1 ; i <= ar_NodesNonRequired + ar_NodesRequired ; i++)
-		{
-			for (int j=1 ; j <= ar_NodesNonRequired + ar_NodesRequired ; j++)
-			{
-				if (ar_distanceNodes.at(i).at(k) + ar_distanceNodes.at(k).at(j) < ar_distanceNodes.at(i).at(j))
-					ar_distanceNodes.at(i).at(j) = ar_distanceNodes.at(i).at(k) + ar_distanceNodes.at(k).at(j) ;
-			}
-		}
-	}
+        for (int k=1 ; k <= ar_NodesNonRequired + ar_NodesRequired ; k++)
+        {
+            double current_perc = (float)k*100/(ar_NodesNonRequired+ar_NodesRequired);
+            if (current_perc - last_perc > 1.0) {
+                cout << "Progress: " << current_perc << "%                        \r" << flush;
+                last_perc = current_perc;
+            }
+            for (int i=1 ; i <= ar_NodesNonRequired + ar_NodesRequired ; i++)
+            {
+                for (int j=1 ; j <= ar_NodesNonRequired + ar_NodesRequired ; j++)
+                {
+                    if (ar_distanceNodes.at(i).at(k) + ar_distanceNodes.at(k).at(j) < ar_distanceNodes.at(i).at(j))
+                        ar_distanceNodes.at(i).at(j) = ar_distanceNodes.at(i).at(k) + ar_distanceNodes.at(k).at(j) ;
+                }
+            }
+        }
+        Params::writeDistanceMatrix(ar_distanceNodes,pathToDistanceMatrix);
+    }
 
 	// Then, we would still like to include some distance information between services.
 	// The distance between two services is the minimum distance between the closest endpoints of the edge
@@ -737,47 +727,20 @@ void Params::ar_computeDistancesNodes()
 
 void Params::ar_computeDistancesArcs()
 {
-    ifstream rmat;
-    string continu;
-    if (pathToDistanceMatrix != "") {
-        rmat.open(pathToDistanceMatrix.c_str());
-    }
-    if (rmat.good()) {
-        cout << "Found matrix. restoring" << endl;
-        cout << "Progress: 0.000%\r" << flush;
-        double last_perc = 0.0;
-        auto start = chrono::system_clock::now();
-        
-        for (int k=0 ; k < ar_nbArcsDistance ; k++) {
-            double current_perc = (float)k*100/(ar_nbArcsDistance);
-            if (current_perc-last_perc > 1.0) {
-                chrono::duration<double> elapsed = chrono::system_clock::now() - start;
-                double remainig_seconds = elapsed.count()/current_perc*(100.0-current_perc);
-                
-                cout << "Progress: " << current_perc << "%    [" << (int) remainig_seconds/60 << ":" << setfill('0') << setw(2) << (int) remainig_seconds % 60 << "] remaining                       \r" << flush;
-                last_perc = current_perc;
-            }
-            for (int i=0; i < ar_nbArcsDistance ; i++) {
-                rmat >> ar_distanceArcs.at(k).at(i);
-            }
-            getline(rmat,continu);
-        }
-        rmat.close();
-    }
-    else {
+    if (!Params::readDistanceMatrix(ar_distanceArcs,pathToDistanceMatrix)) {
         // computes the distance in the line graph (for the turn penalties)
         // simple application of the Floyd Warshall algorithm
         cout << "Computing distance args" << endl;
         cout << "Progress: 0.000%\r" << flush;
         double last_perc = 0.0;
-        auto start = chrono::system_clock::now();
+        clock_t start = clock();
     
         for (int k=0 ; k < ar_nbArcsDistance ; k++)
         {
             double current_perc = (float)k*100/(ar_nbArcsDistance);
             if (current_perc-last_perc > 1.0) {
-                chrono::duration<double> elapsed = chrono::system_clock::now() - start;
-                double remainig_seconds = elapsed.count()/current_perc*(100.0-current_perc);
+                double elapsed = (double)(clock() - start)/CLOCKS_PER_SEC;
+                double remainig_seconds = elapsed/current_perc*(100.0-current_perc);
                 
                 cout << "Progress: " << current_perc << "%    [" << (int) remainig_seconds/60 << ":" << setfill('0') << setw(2) << (int) remainig_seconds % 60 << "] remaining                       \r" << flush;
                 last_perc = current_perc;
@@ -792,20 +755,7 @@ void Params::ar_computeDistancesArcs()
             }
         }
     
-        if (pathToDistanceMatrix != "")
-        {
-            ofstream distance_matrix;
-            distance_matrix.open(pathToDistanceMatrix.c_str());
-            if (distance_matrix.good()) {
-                for (int k=0 ; k < ar_nbArcsDistance ; k++) {
-                    for (int i=0; i < ar_nbArcsDistance ; i++) {
-                        distance_matrix << ar_distanceArcs.at(k).at(i) << " ";
-                    }
-                    distance_matrix << endl;
-                }
-                distance_matrix.close();
-            }
-        }
+        Params::writeDistanceMatrix(ar_distanceArcs,pathToDistanceMatrix);
     }
     
 
@@ -1248,4 +1198,65 @@ void Params::processDataStructuresMD ()
 		}
 		cli.at(i).visitsOrigin = cli.at(i).visits ;
 	}	
+}
+
+void Params::writeDistanceMatrix (const vector<vector<double> >& matrix, string filename) {
+    if (filename == "")
+        return;
+        
+    ofstream dfile;
+    try {
+        dfile.open(filename.c_str());
+        if (dfile.good()) {
+            for (int k=0 ; k < matrix.size() ; k++) {
+                for (int i=0; i < matrix.at(k).size() ; i++) {
+                    dfile << matrix.at(k).at(i) << " ";
+                }
+                dfile << endl;
+            }
+            dfile.close();
+        }
+    } catch (ofstream::failure e) {
+        cout << "Could not write distance matrix" << endl;
+    }
+}
+
+bool Params::readDistanceMatrix (vector<vector<double> >& matrix, string filename) {
+    if (filename == "")
+        return false;
+        
+    ifstream rmat;
+    string continu;
+    bool success = false;
+    
+    try {
+        rmat.open(filename.c_str());
+        if (rmat.good()) {
+            cout << "Found matrix. restoring" << endl;
+            cout << "Progress: 0.000%\r" << flush;
+            double last_perc = 0.0;
+            clock_t start = clock();
+        
+            for (int k=0 ; k < matrix.size() ; k++) {
+                double current_perc = (float)k*100/(matrix.size());
+                if (current_perc-last_perc > 1.0) {
+                    double elapsed = (double)(clock() - start)/CLOCKS_PER_SEC;
+                    double remainig_seconds = elapsed/current_perc*(100.0-current_perc);
+                
+                    cout << "Progress: " << current_perc << "%    [" << (int) remainig_seconds/60 << ":" << setfill('0') << setw(2) << (int) remainig_seconds % 60 << "] remaining                       \r" << flush;
+                    last_perc = current_perc;
+                }
+            
+                for (int i=0; i < matrix.at(k).size() ; i++) {
+                    rmat >> matrix.at(k).at(i);
+                }
+                getline(rmat,continu);
+            }
+            rmat.close();
+            success = true;
+        }
+    } catch (ifstream::failure e) {
+        cout << "Could not load distance matrix" << endl;
+    }
+    return success;
 }
