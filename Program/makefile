@@ -62,6 +62,13 @@ $(TARGETDIR)/Population.o: Population.h Population.cpp
 $(TARGETDIR)/Route.o: Route.h Route.cpp
 	$(CCC) $(CCFLAGS) $(CPPFLAGS) -c Route.cpp -o $(TARGETDIR)/Route.o
 
+test: gencarp
+	./gencarp ../Instances/CARP/gdb1.dat -type 30 -sol testCARP.sol -seed 1
+	./gencarp ../Instances/MCGRP/mgval_0.25_1A.dat -type 31 -sol testMCGRP.sol -seed 1
+	./gencarp ../Instances/PCARP/gdb10.txt -type 32  -sol testPCARP.sol -seed 1 -veh 10
+	./gencarp ../Instances/CARP/egl-e1-A.dat -type 33 -sol testMDCARP.sol -seed 1 -dep 4
+	./gencarp ../Instances/MM-kWRPP/P202100 -type 35 -sol testMM-kWRPP.sol -seed 1 -veh 3
+
 clean:
 	 $(RM) \
 	$(TARGETDIR)/gencarp \
