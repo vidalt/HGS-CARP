@@ -188,9 +188,6 @@ public:
 	/* PROCEDURE OF INSERTION OF THE MISSING NODES IN THE PIX CROSSOVER */
 	void placeManquants ();
 
-	/* USED FOR DEBUGGING */
-	void controlRoutes ();
-
 	// Constructor
 	LocalSearch();
 

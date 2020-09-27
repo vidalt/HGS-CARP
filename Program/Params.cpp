@@ -1208,15 +1208,15 @@ void Params::writeDistanceMatrix (const vector<vector<double> >& matrix, string 
     try {
         dfile.open(filename.c_str());
         if (dfile.good()) {
-            for (int k=0 ; k < matrix.size() ; k++) {
-                for (int i=0; i < matrix.at(k).size() ; i++) {
+            for (int k=0 ; k < (int)matrix.size() ; k++) {
+                for (int i=0; i < (int)matrix.at(k).size() ; i++) {
                     dfile << matrix.at(k).at(i) << " ";
                 }
                 dfile << endl;
             }
             dfile.close();
         }
-    } catch (ofstream::failure e) {
+    } catch (const ofstream::failure & e) {
         cout << "Could not write distance matrix" << endl;
     }
 }
@@ -1237,7 +1237,7 @@ bool Params::readDistanceMatrix (vector<vector<double> >& matrix, string filenam
             double last_perc = 0.0;
             clock_t start = clock();
         
-            for (int k=0 ; k < matrix.size() ; k++) {
+            for (int k=0 ; k < (int)matrix.size() ; k++) {
                 double current_perc = (float)k*100/(matrix.size());
                 if (current_perc-last_perc > 1.0) {
                     double elapsed = (double)(clock() - start)/CLOCKS_PER_SEC;
@@ -1247,7 +1247,7 @@ bool Params::readDistanceMatrix (vector<vector<double> >& matrix, string filenam
                     last_perc = current_perc;
                 }
             
-                for (int i=0; i < matrix.at(k).size() ; i++) {
+                for (int i=0; i < (int)matrix.at(k).size() ; i++) {
                     rmat >> matrix.at(k).at(i);
                 }
                 getline(rmat,continu);
@@ -1255,7 +1255,7 @@ bool Params::readDistanceMatrix (vector<vector<double> >& matrix, string filenam
             rmat.close();
             success = true;
         }
-    } catch (ifstream::failure e) {
+    } catch (const ifstream::failure & e) {
         cout << "Could not load distance matrix" << endl;
     }
     return success;

@@ -434,7 +434,6 @@ void Individu::updateLS()
 {
 	// Loading the local search structures
 	// Warning, Split must have been computed before
-	int depot ;
 	int i,j ;
 	Noeud * myDepot ;
 	Noeud * myDepotFin ;
@@ -455,7 +454,6 @@ void Individu::updateLS()
 
 		for (int jj = 0 ; jj < params->nombreVehicules[kk] ; jj ++ )
 		{
-			depot = params->ordreVehicules[kk][params->nombreVehicules[kk] - jj - 1].depotNumber ;
 			i = (int)pred[kk][params->nombreVehicules[kk] - jj][j] ;
 
 			myDepot = &localSearch->depots[kk][params->nombreVehicules[kk] - jj - 1];
