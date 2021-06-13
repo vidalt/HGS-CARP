@@ -26,7 +26,7 @@ Route::Route(int cour, Noeud * depot, Vehicle * vehicle, Params * params, Indivi
 	{
 		coutInsertionClient.push_back(vector <double> ()) ;
 		placeInsertionClient.push_back(vector <Noeud *> ());
-		for (int p=0 ; p < params->cli[i].visits.size() ; p++)
+		for (int p=0 ; p < (int)params->cli[i].visits.size() ; p++)
 		{
 			coutInsertionClient[i].push_back(1.e30);
 			placeInsertionClient[i].push_back(NULL);

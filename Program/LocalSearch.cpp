@@ -1496,7 +1496,7 @@ void LocalSearch::placeManquants ()
 	int k ;
 	pattern meilleurPattern ;
 	double depense, meilleureDepense ;
-	int indexMeilleur ;
+	int indexMeilleur = -1;
 	Noeud * noeudTravail ;
 	int calcul1, calcul2 ;
 	pattern pattern1, pattern2 ;
@@ -1647,35 +1647,6 @@ void LocalSearch::addOP (int day, int client)
 	}
 	else
 		ordreParcours[day].push_back(client);
-}
-
-void LocalSearch::controlRoutes ()
-{
-	bool tracesDebug = false; // set to true to activate traces
-	Noeud * myNoeud ;
-	Noeud * autreNoeud ;
-	bool firstIt = true ;
-	for (int k=1 ; k<=params->nbDays ; k++)
-		for (int r=0 ; r < params->nombreVehicules[k] ; r++)
-		{
-			firstIt = true ;
-			if (tracesDebug) cout << "day(" << k << ") " << "route(" << r << ") // " ;
-			myNoeud = routes[k][r].depot ;
-			if (tracesDebug) cout << myNoeud->cour ;
-			while ( !myNoeud->estUnDepot || firstIt )
-			{
-				firstIt = false ;
-				autreNoeud = myNoeud ;
-				myNoeud = myNoeud->suiv ;
-				if (tracesDebug) cout << " -> " << myNoeud->cour ;
-				if (autreNoeud != myNoeud->pred)
-					throw string (" !ERROR LINKS! ") ;
-				if (myNoeud->route != &routes[k][r])
-					throw string (" !ERROR ROUTES! ") ;
-			}
-			if (tracesDebug) cout << endl ;
-		}
-		if (tracesDebug) cout << endl ;
 }
 
 void LocalSearch::reinitSingleDayMoves(Route * r)
@@ -1866,8 +1837,8 @@ bool LocalSearch::ejectionChains (int day)
 			nbEjectionChainsNodes += orderEnds[myID]->nbCustNodesInChain ;
 			elementCour = orderEnds[myID];
 			elementPred = elementCour->pred ;
-			Noeud * insertionPosition ;
-			Noeud * insertionPositionTemp ;
+			Noeud * insertionPosition = NULL;
+			Noeud * insertionPositionTemp = NULL;
 			while (elementCour != NULL)
 			{
 				if (!(elementPred == NULL || elementPred->myNode->estUnDepot)) 
