@@ -294,8 +294,7 @@ int Individu::splitSimple(int k)
 // We already pre-compute and store them in "coutArcsSplit"
 void Individu::splitLF(int k) 
 { 
-	double cost, mydist,mytminex,myloadex;
-	int i,j ;
+	double cost,mydist,mytminex,myloadex;
 	myseq->initialisation(params->ordreVehicules[k][0].depotNumber,params,this,k,false);
 
 	// preprocessing arc costs
@@ -318,9 +317,9 @@ void Individu::splitLF(int k)
 
 
 	// for each vehicle
-	for ( int cam = 0 ; cam < params->nombreVehicules[k] ; cam++)
+	for (int cam = 0 ; cam < params->nombreVehicules[k] ; cam++)
 	{
-		i = 0 ;
+		int i = 0 ;
 		// propagate all labels
 		while (i < (int)chromT[k].size() && potentiels[cam][i].evaluation < 1.e29 )
 		{
@@ -337,7 +336,7 @@ void Individu::splitLF(int k)
 				potentiels[cam+1][i].routes = potentiels[cam][i].routes ;
 				pred[k][cam+1][i] = i ;
 			}
-			j = i ;
+			int j = i ;
 			while (j < (int)chromT[k].size() && myloadex <= params->ordreVehicules[k][cam].vehicleCapacity*(params->borne-1.0) )
 			{
 				cost = coutArcsSplit[i][j+1].evaluation ;

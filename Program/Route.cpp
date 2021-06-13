@@ -45,14 +45,14 @@ void Route::reverse ()
 		Noeud * temp ;
 		Noeud * myDepot = depot ;
 		Noeud * myDepotFin = depot->pred ;
-		Noeud * cour = depot->suiv ;
+		Noeud * current = depot->suiv ;
 
-		while ( !cour->estUnDepot )
+		while ( !current->estUnDepot )
 		{
-			temp = cour->suiv ;
-			cour->suiv = cour->pred ;
-			cour->pred = temp ;
-			cour = temp ;
+			temp = current->suiv ;
+			current->suiv = current->pred ;
+			current->pred = temp ;
+			current = temp ;
 		}
 
 		temp = myDepot->suiv ;

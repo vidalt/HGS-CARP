@@ -85,18 +85,9 @@ public:
 
 	// temporary structures used in the crossover
 	vector < int > freqClient ;
-	int debut;
-	int fin;
-
-	// population diversification
-	void diversify ();
 
 	// regular management of the penalty coefficients
 	void gererPenalites ();
-
-	// Function used in the decomposition phases (single depot and period).
-	// Create some subproblems with a restricted number of customers
-	void improve_decompRoutes (int maxIterNonProd, Individu * indiv, int grainSize, Population * pop, int nbRec);
 
 	// Constructor
 	Genetic(Params * params,Population * population, clock_t ticks, bool traces);

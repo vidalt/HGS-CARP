@@ -79,18 +79,13 @@ private:
 
 	// Small pointers and variables which are used during the LS
 	Noeud * noeudU ;
-	Noeud * noeudUPred ;
 	Noeud * x ;
-	Noeud * noeudXSuiv ;
     Noeud * noeudV ;
-	Noeud * noeudVPred ;
 	Noeud * y ;
-	Noeud * noeudYSuiv ;
 	Route * routeU ;
 	Route * routeV ;
 	Vehicle * vehicleU ;
 	Vehicle * vehicleV ;
-	int noeudUCour, noeudUPredCour, xCour, xSuivCour, ySuivCour, noeudVCour, noeudVPredCour, yCour ;
 	bool testingIncumbentPattern ; // little variable used during the local search (PI) to see if we are testing the pattern for which the customer is currently inserted
 	bool deplacementIntraJour ; // flag raised if its possible to improve the location of a customer in its own day (PVRP and PCARP), used in PI
 	bool firstLoop ; // are we in the first loop (for PI mutations)
@@ -192,9 +187,6 @@ public:
 
 	/* PROCEDURE OF INSERTION OF THE MISSING NODES IN THE PIX CROSSOVER */
 	void placeManquants ();
-
-	/* USED FOR DEBUGGING */
-	void controlRoutes ();
 
 	// Constructor
 	LocalSearch();

@@ -791,17 +791,17 @@ double SeqData::evaluationLB(vector <SeqData *> seqs, Vehicle * vehicle)
 {
 	SeqData *seqbPred = seqs[0];
 	SeqData *seqb = seqs[1];
-	double loadTemp = seqbPred->load ;
-	double distanceTemp = seqbPred->distance ;
+	double myLoadTemp = seqbPred->load ;
+	double myDistanceTemp = seqbPred->distance ;
 
 	for (int i=1 ; i<(int)seqs.size() ; i++)
 	{
 		seqbPred = seqs[i-1];
 		seqb = seqs[i];
-		distanceTemp += params->timeCost[seqbPred->lastNode][seqb->firstNode] + seqb->distance ;
-		loadTemp += seqb->load ;
+		myDistanceTemp += params->timeCost[seqbPred->lastNode][seqb->firstNode] + seqb->distance ;
+		myLoadTemp += seqb->load ;
 	}
-	return distanceTemp + max(loadTemp - vehicle->vehicleCapacity,0.0)*params->penalityCapa ;
+	return myDistanceTemp + max(myLoadTemp - vehicle->vehicleCapacity,0.0)*params->penalityCapa ;
 }
 
 #endif
