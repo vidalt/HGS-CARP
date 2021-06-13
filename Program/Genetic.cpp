@@ -492,7 +492,7 @@ void Genetic::crossPIX ()
 }
 
 Genetic::Genetic(Params * params,Population * population, clock_t ticks, bool traces) : 
-params(params) , population(population) , ticks(ticks) , traces(traces)
+ticks(ticks), traces(traces), population(population), params(params)
 {
 	for (int i=0 ; i < params->nbClients + params->nbDepots ; i++ )
 		freqClient.push_back(params->cli[i].freq);

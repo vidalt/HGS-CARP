@@ -21,7 +21,7 @@
 Noeud::Noeud(void) {}
 
 Noeud::Noeud(bool estUnDepot, int cour,int jour, bool estPresent, Noeud * suiv , Noeud * pred, Route * route,Params * params) 
-: estUnDepot(estUnDepot),cour(cour),jour(jour), estPresent(estPresent),suiv(suiv), pred(pred), route(route),params(params)
+: params(params), estUnDepot(estUnDepot), cour(cour), jour(jour), estPresent(estPresent), suiv(suiv), pred(pred), route(route)
 {
 	int ccour = cour ;
 	if (estUnDepot) ccour = 0 ;
