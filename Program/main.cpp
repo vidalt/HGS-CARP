@@ -48,7 +48,7 @@ int main (int argc, char *argv[])
 		commandline c(argc, argv);
 
 		if (!c.is_valid())
-			throw string("Commandline could not be read, Usage : gencarp instance -type problemType [-t cpu-time] [-sol solutionPath]  [-dmat distanceMatrix] [-s seed] [-veh nbVehicles] [-dep nbDepots]");
+			throw string("Commandline could not be read, Usage : gencarp instance -type problemType [-t cpu-time] [-sol solutionPath]  [-s seed] [-veh nbVehicles] [-dep nbDepots]");
 
 		minFleetSize = (c.get_type() == 32) ; // For the PCARP, we need to minimize fleet size as first objective, then minimize distance as second objective
 		minMaxTour = (c.get_type() == 35) ; // For the MM-kWRPP, we need to minimize the length of the maximum route
@@ -61,7 +61,7 @@ int main (int argc, char *argv[])
 			nb_ticks_allowed = c.get_cpu_time() * CLOCKS_PER_SEC;
 
 			// initialisation of the Parameters
-			mesParametres = new Params(c.get_path_to_instance(),c.get_path_to_solution(),c.get_path_to_BKS(),c.get_path_to_distmat(),c.get_seed(),c.get_type(),c.get_nbVeh(),c.get_nbDep(),false) ;
+			mesParametres = new Params(c.get_path_to_instance(),c.get_path_to_solution(),c.get_path_to_BKS(),c.get_seed(),c.get_type(),c.get_nbVeh(),c.get_nbDep(),false) ;
 
 			// Running the algorithm
 			population = new Population(mesParametres) ;
@@ -93,7 +93,7 @@ int main (int argc, char *argv[])
 			while (validExist) // A feasible solution has been found, we can continue to decrease (either the number of vehicles or the distance constraint, depending on the case)
 			{	
 				// Setting the parameters of the next problem
-				mesParametresTab.push_back(new Params(c.get_path_to_instance(),c.get_path_to_solution(),c.get_path_to_BKS(),c.get_path_to_distmat(),c.get_seed(),c.get_type(),veh,c.get_nbDep(),true)) ;
+				mesParametresTab.push_back(new Params(c.get_path_to_instance(),c.get_path_to_solution(),c.get_path_to_BKS(),c.get_seed(),c.get_type(),veh,c.get_nbDep(),true)) ;
 				nbpop = (int)mesParametresTab.size() ;
 				nbOverallLoop ++ ; // counting the number of subproblems which have been resolved
 
@@ -162,7 +162,7 @@ int main (int argc, char *argv[])
 			{
 				veh ++ ;
 				cout << "######### Second phase : minimizing Distance with " << veh << " vehicles" << endl ;
-				mesParametres2 = new Params(c.get_path_to_instance(),c.get_path_to_solution(),c.get_path_to_BKS(),c.get_path_to_distmat(),c.get_seed(),c.get_type(),veh,c.get_nbDep(),false) ;
+				mesParametres2 = new Params(c.get_path_to_instance(),c.get_path_to_solution(),c.get_path_to_BKS(),c.get_seed(),c.get_type(),veh,c.get_nbDep(),false) ;
 				population2 = new Population(mesParametres2) ;
 				if (nbpop >= 1 && populationTab[nbpop-1]->getIndividuBestValide() != NULL) 
 					population2->addAllIndividus(populationTab[nbpop-1]);

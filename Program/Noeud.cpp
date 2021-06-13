@@ -21,13 +21,13 @@
 Noeud::Noeud(void) {}
 
 Noeud::Noeud(bool estUnDepot, int cour,int jour, bool estPresent, Noeud * suiv , Noeud * pred, Route * route,Params * params) 
-: params(params), estUnDepot(estUnDepot), cour(cour), jour(jour), estPresent(estPresent), suiv(suiv), pred(pred), route(route)
+: estUnDepot(estUnDepot),cour(cour),jour(jour), estPresent(estPresent),suiv(suiv), pred(pred), route(route),params(params)
 {
 	int ccour = cour ;
 	if (estUnDepot) ccour = 0 ;
 
 	// Initialization of the coutInsertion structure
-	for (int i=0 ; i < (int)params->cli[ccour].visits.size() ; i++)
+	for (int i=0 ; i < params->cli[ccour].visits.size() ; i++)
 	{
 		coutInsertion.push_back(1.e30) ;
 		placeInsertion.push_back(NULL) ;

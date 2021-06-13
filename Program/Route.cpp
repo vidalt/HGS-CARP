@@ -20,13 +20,13 @@
 
 Route::Route(void){}
 
-Route::Route(int cour, Noeud * depot, Vehicle * vehicle, Params * params, Individu * indiv, int day) : params(params), individu(indiv), cour(cour), day(day), depot(depot), vehicle(vehicle) 
+Route::Route(int cour, Noeud * depot, Vehicle * vehicle, Params * params, Individu * indiv, int day) : cour(cour), depot(depot), vehicle(vehicle), params(params), individu(indiv), day(day)
 {
 	for (int i=0 ; i < params->nbClients + params->nbDepots ; i++ )
 	{
 		coutInsertionClient.push_back(vector <double> ()) ;
 		placeInsertionClient.push_back(vector <Noeud *> ());
-		for (int p=0 ; p < (int)params->cli[i].visits.size() ; p++)
+		for (int p=0 ; p < params->cli[i].visits.size() ; p++)
 		{
 			coutInsertionClient[i].push_back(1.e30);
 			placeInsertionClient[i].push_back(NULL);

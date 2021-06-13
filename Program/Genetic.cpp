@@ -36,6 +36,7 @@ void Genetic::evolveHGA (int maxIterNonProd, int nbRec)
 	place2 = 10000 ;
 	nbIterNonProd = 1 ;
 	nbIter = 0 ;
+	int resultCross ;
 	string temp ;
 	double fitBeforeRepair ;
 	CoutSol bestSolFeasibility ;
@@ -60,9 +61,9 @@ void Genetic::evolveHGA (int maxIterNonProd, int nbRec)
 		rejeton2->recopieIndividu(rejeton2,parent2); // Put them in adequate data structures
 
 		if (!params->periodique && !params->multiDepot) 
-			crossOX(); // Pick OX crossover if its a single-period problem
+			resultCross = crossOX(); // Pick OX crossover if its a single-period problem
 		else 
-			crossPIX() ; // Otherwise PIX (see Vidal et al 2012 -- OR)
+			resultCross = crossPIX() ; // Otherwise PIX (see Vidal et al 2012 -- OR)
 
 		// SPLIT
 		rejeton->generalSplit();
@@ -146,7 +147,7 @@ void Genetic::evolveILS ()
 	int nbCHILD = 50 ;
 	bool isFirstLoop ;
 	Individu * parent ;
-	clock_t timeBest2 = 0 ;
+	clock_t timeBest2 ;
 	rejeton->localSearch->nbTotalRISinceBeginning = 0 ;
 	rejeton->localSearch->nbTotalPISinceBeginning = 0 ;
 	nbIter = 0 ;
@@ -242,7 +243,7 @@ void Genetic::evolveILS ()
 
 	// ajouter la meilleure solution trouvée dans la population pour l'écriture en fin d'algorithme
 	population->addIndividu(rejetonBestFoundAll);
-	population->timeBest = timeBest2 ;
+	population->timeBest = timeBest2 ; // need to correct the time to best solution.
 }
 
 void Genetic::reparer ()
@@ -309,9 +310,9 @@ void Genetic::gererPenalites ()
 		population->validatePen(population->invalides);
 }
 
-void Genetic::crossOX ()
+int Genetic::crossOX ()
 {
-	int temp;
+	int temp, tempSuiv ;
 
 	// We pick the beginning and end of the crossover zone
 	int debut = rand() % params->nbClients ;
@@ -335,15 +336,18 @@ void Genetic::crossOX ()
 	for (int i=1 ; i <= params->nbClients ; i++)
 	{
 		temp = rejeton2->chromT[1][(fin + i) % params->nbClients] ;
+		tempSuiv = rejeton2->chromT[1][(fin + i + 1) % params->nbClients] ;
 		if (freqClient[temp] == 1)
 		{
 			rejeton->chromT[1][j % params->nbClients] = temp ;
 			j ++ ;
 		}
 	}
+
+	return 0 ;
 }
 
-void Genetic::crossPIX ()
+int Genetic::crossPIX ()
 {
 	vector < int > vide, garder, joursPerturb, tableauFin, tableauEtat ;
 	vector < vector <int> > garder2 ;
@@ -359,6 +363,7 @@ void Genetic::crossPIX ()
 		rejeton->chromP[i].pat = 0 ;
 		rejeton->chromP[i].dep = -1 ;
 	}
+
 
 	// We take the days in random order
 	for (int k=1 ; k <= params->nbDays ; k++ )
@@ -396,7 +401,7 @@ void Genetic::crossPIX ()
 			fin = (int)(rand() % rejeton->chromT[day].size()) ;
 			tableauFin.push_back(fin);
 			j = debut ;
-			while ( j != (int)((fin + 1) % rejeton->chromT[day].size()) )
+			while ( j != ((fin + 1) % rejeton->chromT[day].size()) )
 			{
 				freqClient[rejeton->chromT[day][j]] -= 1 ;
 				rejeton->chromP[rejeton->chromT[day][j]].pat += (int)pow((float)2,(int)((params->nbDays-day)%params->ancienNbDays)) ;
@@ -489,10 +494,12 @@ void Genetic::crossPIX ()
 	rejeton->updateLS();
 	rejeton->localSearch->placeManquants(); // and we perform a least-cost insertion of the missing visits
 	rejeton->updateIndiv();
+
+	return 0 ;
 }
 
 Genetic::Genetic(Params * params,Population * population, clock_t ticks, bool traces) : 
-ticks(ticks), traces(traces), population(population), params(params)
+params(params) , population(population) , ticks(ticks) , traces(traces)
 {
 	for (int i=0 ; i < params->nbClients + params->nbDepots ; i++ )
 		freqClient.push_back(params->cli[i].freq);

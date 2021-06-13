@@ -28,6 +28,9 @@ class Vehicle
 
 private:
 
+// Access to the parameters of the problem
+Params * params ;
+
 public:
 
 // Associated depot number

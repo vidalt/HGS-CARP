@@ -78,10 +78,10 @@ public:
 	void reparer ();
 
 	// OX Crossover
-	void crossOX ();
+	int crossOX ();
 
 	// PIX Crossover
-	void crossPIX ();
+	int crossPIX ();
 
 	// temporary structures used in the crossover
 	vector < int > freqClient ;
