@@ -524,15 +524,10 @@ void SeqData::concatOneAfter(SeqData * seq, int Vcour, Individu * myIndiv, int d
 		for (int j=0 ; j < vCourCli->ar_nbModes ; j++)
 		{
 			bestCost[i][j] = 1.e30 ;
-			int myK = -1;
 			for (int k=0 ; k < lastCli->ar_nbModes ; k++)
 			{
 				tempc = seq->bestCost[i][k] + params->ar_distanceArcs[lastCli->ar_Modes[k]->indexArc][vCourCli->ar_Modes[j]->indexArc] ;
-				if (tempc < bestCost[i][j]) 
-				{
-					bestCost[i][j] = tempc ;
-					myK = k ;
-				}
+				if (tempc < bestCost[i][j]) bestCost[i][j] = tempc;
 				if (tempc < distance) distance = tempc ;
 			}
 		}
